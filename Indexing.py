@@ -2,7 +2,7 @@ import environment
 from langchain_community.document_loaders import PyPDFLoader
 
 #pdf reader, makes list of docs
-loader = PyPDFLoader("your_file.pdf")
+loader = PyPDFLoader("/Users/lidasmac/Desktop/Foucault_Michel_Power_Knowledge_Selected_Interviews_and_Other_Writings_1972-1977.pdf")
 docs = loader.load()
 
 #check first page character count and give first 500 char preview of first page
