@@ -2,14 +2,21 @@ def semantic_chunk(text, max_chunk_size=500):
     chunks = []
     
     # Step 1: split by headings first
+    #import regex library
     import re
+    #in regex syntax, mark those with 1~3 #, headline fonts in MARKDOWN, as headline
+    #OR up to 50 char, with 1+ '=' chars, which is underline beneath heading title of plain text docs
     heading_pattern = r'\n#{1,3} .+|\n[A-Z][^\n]{0,50}\n[-=]+'
+    #split string into list, using regex heading_pattern specified above as separator
     sections = re.split(heading_pattern, text)
+    #searches through string and return list of all matches to heading_pattern (i.e., list of headings)
     headings = re.findall(heading_pattern, text)
-    
+    #if no heading for one section, assume it is intro section and add section 
+    if len(sections)>len(headings):
+        headings.insert(0, "Introduction")
+    #for index, section content split by heading, assume len(sections)=len(headings) now
     for i, section in enumerate(sections):
-        heading = headings[i] if i < len(headings) else "Introduction"
-        
+        heading = headings[i]
         # Step 2: if section is too long, split by paragraph
         if len(section) > max_chunk_size:
             paragraphs = section.split('\n\n')
