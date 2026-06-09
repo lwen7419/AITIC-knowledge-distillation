@@ -1,6 +1,5 @@
 def semantic_chunk(text, max_chunk_size=500):
     chunks = []
-    
     # Step 1: split by headings first
     #import regex library
     import re
@@ -18,14 +17,17 @@ def semantic_chunk(text, max_chunk_size=500):
     for i, section in enumerate(sections):
         heading = headings[i]
         # Step 2: if section is too long, split by paragraph
+        j = 0
         if len(section) > max_chunk_size:
             paragraphs = section.split('\n\n')
             for para in paragraphs:
                 if para.strip():
+                    j+=1
                     chunks.append({
                         "text": para.strip(),
                         "section": heading.strip(),
-                        "chunk_type": "paragraph"
+                        "chunk_type": "paragraph",
+                        "paragraph_index": j
                     })
         else:
             if section.strip():
