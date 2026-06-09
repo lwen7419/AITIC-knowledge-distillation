@@ -23,8 +23,8 @@ chroma_langchain_db/                — local ChromaDB vector store (gitignored,
 ## Key Technical Decisions (do not change without discussion)
 - **Embeddings**: `nomic-embed-text` via Ollama — local inference, no API key, strong on technical text
 - **LLM**: `qwen3-vl-8b` via Ollama — required by project brief, multimodal capable
-- **Chunking**: custom heading-based semantic chunker (`heading_based_semantic_chunker.py`), not LangChain's built-in `SemanticChunker` — preserves document structure for academic PDFs
-- **RAG pattern**: chain approach via `@dynamic_prompt` middleware, not agent+tool — single LLM call per query, lower latency
+- **Chunking**: custom heading-based semantic chunker (`heading_based_semantic_chunker.py`), not LangChain's built-in `SemanticChunker` — preserves document structure for academic PDFs. But for baseline demo, use LangChain's built-in `SemanticChunker`
+- **RAG pattern**: currently chain approach via `@dynamic_prompt` middleware — single LLM call per query, lower latency. Agent+tool approach (multi-step retrieval) is a potential upgrade.
 - **Vector store**: ChromaDB with local persistence at `./chroma_langchain_db`
 - **All inference runs locally via Ollama** — no external API calls, data never leaves the machine
 
@@ -45,11 +45,11 @@ Query input
 
 ## Metrics Targets (from project brief)
 - **Hit@5 ≥ 85%** — correct answer appears in top 5 retrieved chunks
-- **Hallucination rate ≤ 15%** — answers generated without citation grounding
+- **Hallucination rate ≤ 15%** — answers generated without citation grounding (citation grounding not yet implemented)
 - **Token efficiency ≤ 60% of baseline** — total tokens (prompt + retrieved chunks + output) vs. standard LangChain + Qwen-8B-Instruct RAG
 - **Throughput ≥ 15 pages/minute** — end-to-end processing speed including text and images
 
-All metrics must hold across 3 distinct subjects (e.g. CS, clinical medicine, law).
+All metrics must hold across 3 distinct subjects.
 
 ## Baseline for Comparison
 Standard LangChain + RecursiveCharacterTextSplitter + Qwen-8B-Instruct RAG.
@@ -60,11 +60,9 @@ Each ablation saves a separate JSON. Conditions to test:
 - Full pipeline (default)
 - Heading-based chunking OFF → RecursiveCharacterTextSplitter
 - Citation grounding OFF
-- Q4 quantization instead of default
 - Multimodal parsing OFF → plain text only
 
 ## Coding Conventions
-- Always add comments explaining *why*, not just *what*
 - Spread dicts instead of re-listing fields: `{**doc.metadata, **chunk}` not `{"page": chunk["page"], ...}`
 - All model/embeddings/vector store instantiation lives in `environment.py` — import from there, never re-instantiate in other files
 - `environment.py` has no `if __name__ == "__main__"` guard — it is meant to be imported and its top-level code runs on import by design
