@@ -1,4 +1,5 @@
 def semantic_chunk(text, max_chunk_size=500):
+    #initiate chunk as list, later becomes list of dictionaries
     chunks = []
     # Step 1: split by headings first
     #import regex library
@@ -25,18 +26,23 @@ def semantic_chunk(text, max_chunk_size=500):
             for j, para, in paragraphs:
                 #if there is actual content
                 if para.strip():
+                    #add paragraph metadata as new dictionary item in chunks
                     chunks.append({
                         "text": para.strip(),
                         "section": heading.strip(),
-                        "chunk_type": "paragraph",
-                        "paragraph_index": j
+                        "chunk_type": "paragraph", #saves chunk type as paragraph
+                        "paragraph_index": j #saves paragraph number as paragraph index
                     })
+        #if not long section compared to max_chunk_size
         else:
+            #if section content not empty
             if section.strip():
+                #add section metadata as new dictionary item in chunks
                 chunks.append({
                     "text": section.strip(),
                     "section": heading.strip(),
-                    "chunk_type": "section"
+                    "chunk_type": "section" #saves chunk type as section
+                    #no paragraph_index
                 })
     
     return chunks
