@@ -23,7 +23,7 @@ def semantic_chunk(text, max_chunk_size=500):
             #split section into paragraphs by two entries each
             paragraphs = section.split('\n\n')
             #for each split paragraph in section 
-            for j, para, in paragraphs:
+            for j, para, in enumerate(paragraphs):
                 #if there is actual content
                 if para.strip():
                     #add paragraph metadata as new dictionary item in chunks
