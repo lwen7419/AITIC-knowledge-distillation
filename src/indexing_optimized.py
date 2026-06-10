@@ -11,6 +11,7 @@ print(docs[0].page_content[:500])
 
 ##Splitting
 from heading_based_semantic_chunker import semantic_chunk
+from langchain_core.documents import Document
 
 all_splits = []
 for doc in docs:
