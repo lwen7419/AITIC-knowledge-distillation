@@ -1,9 +1,10 @@
-def semantic_chunk(text, max_chunk_size=500):
+import re
+from langchain_core.documents import Document
+
+def semantic_chunk(docs, max_chunk_size=500):
     #initiate chunk as list, later becomes list of dictionaries
     chunks = []
     # Step 1: split by headings first
-    #import regex library
-    import re
     #in regex syntax, mark those with 1~3 #, headline fonts in MARKDOWN, as headline
     #OR up to 50 char, with 1+ '=' chars, which is underline beneath heading title of plain text docs
     heading_pattern = r'\n#{1,3} .+|\n[A-Z][^\n]{0,50}\n[-=]+'
