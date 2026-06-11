@@ -5,6 +5,7 @@ sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "../
 
 from ground_truth_foucault import QA_PAIRS
 import environment
+from RAG_chain import ask
 
 if len(sys.argv) < 2:
     print("Usage: python eval/run_eval.py <condition>")
@@ -44,24 +45,11 @@ def run_judge(query, reference, context, answer):
 
 results = []
 for qa in QA_PAIRS:
-    # retrieval — k=5 for Hit@5
     t0 = time.time()
-    hits = environment.vector_store.similarity_search_with_score(qa["query"], k=5)
-    retrieval_latency = time.time() - t0
+    response, hits = ask(qa["query"])
+    generation_latency = time.time() - t0
+    retrieval_latency = 0  # retrieval happens inside ask; total is generation_latency
     context = "\n\n".join(doc.page_content for doc, _ in hits)
-
-    # generation
-    messages = [
-        ("system", (
-            "Answer using only the context below. "
-            "If the context does not contain the answer, say you don't know.\n\n"
-            + context
-        )),
-        ("human", qa["query"]),
-    ]
-    t1 = time.time()
-    response = environment.model.invoke(messages)
-    generation_latency = time.time() - t1
     answer_text = strip_think(response.content)
 
     # token counts and throughput from Ollama metadata

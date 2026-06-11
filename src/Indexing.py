@@ -1,4 +1,8 @@
 import environment
+
+#clear existing collection so recursive and semantic chunks don't mix
+environment.vector_store.delete_collection()
+
 from langchain_community.document_loaders import PyPDFLoader
 
 #pdf reader, makes list of docs
