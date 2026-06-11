@@ -3,16 +3,20 @@ import json, os, sys, time, statistics
 # script-relative import so this runs correctly from any working directory
 sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "../src"))
 
-from ground_truth_foucault import QA_PAIRS
 import environment
 from RAG_chain import ask
 
-if len(sys.argv) < 2:
-    print("Usage: python eval/run_eval.py <condition>")
-    print("  e.g. recursive_full | semantic_full | semantic_q4 | recursive_q4")
+if len(sys.argv) < 3:
+    print("Usage: python eval/run_eval.py <condition> <ground_truth_module>")
+    print("  e.g. python eval/run_eval.py recursive_foucault ground_truth_foucault")
+    print("       python eval/run_eval.py recursive_biology ground_truth_biology")
+    print("       python eval/run_eval.py recursive_cs111 ground_truth_cs111")
     sys.exit(1)
 
 CONDITION = sys.argv[1]
+
+import importlib
+QA_PAIRS = importlib.import_module(sys.argv[2]).QA_PAIRS
 
 JUDGE_PROMPT = """Given the following, reply with JSON only — no extra text, no markdown fences, no thinking.
 
