@@ -1,0 +1,435 @@
+{
+  "condition": "recursive_cs111",
+  "summary": {
+    "n_queries": 20,
+    "hit5_pct": 90.0,
+    "hallucination_pct": 15.0,
+    "avg_gen_latency_s": 11.425,
+    "avg_tokens_per_sec": 37.5,
+    "avg_input_tokens": 1119,
+    "avg_output_tokens": 331,
+    "avg_similarity": 0.939
+  },
+  "results": [
+    {
+      "query": "What university offers CS 111 and what is the course's full name?",
+      "answer": "I don't know. The retrieved context only discusses Marxist journals, Foucault's writings, and philosophical publications about geography, power, and knowledge. There is no information about computer science courses, universities, or CS 111 in the provided text.",
+      "retrieval_latency_s": 0,
+      "generation_latency_s": 13.502,
+      "total_latency_s": 13.502,
+      "input_tokens": 1041,
+      "output_tokens": 380,
+      "tokens_per_sec": 35.8,
+      "avg_similarity_score": 0.9749,
+      "sections_retrieved": [
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "accurate": true,
+      "hallucinated": false,
+      "reason": "The model correctly states that the retrieved context, which discusses Marxist journals and Foucault's philosophical works, lacks any information about computer science courses or universities."
+    },
+    {
+      "query": "How many major units does CS 111 cover and what are they?",
+      "answer": "I don't know. The provided context is a table of contents and copyright information for Michel Foucault's book \"Power/Knowledge,\" which contains chapters about power, truth, and politics. There is no information about a course called CS 111 or any computer science curriculum in the retrieved context.",
+      "retrieval_latency_s": 0,
+      "generation_latency_s": 10.698,
+      "total_latency_s": 10.698,
+      "input_tokens": 1105,
+      "output_tokens": 289,
+      "tokens_per_sec": 35.8,
+      "avg_similarity_score": 0.8915,
+      "sections_retrieved": [
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "accurate": false,
+      "hallucinated": true,
+      "reason": "The retrieved context contains only Foucault's book content and no information about CS 111, making the reference answer unsupported and hallucinated."
+    },
+    {
+      "query": "What teaching approach are lectures in CS 111 based on, and who developed it?",
+      "answer": "I don't know. The retrieved context contains philosophical discussions about Marx, Nietzsche, and Foucault, but it does not mention CS 111 or any computer science teaching approaches. There is no information about computer science education or specific teaching methodologies for programming courses in the provided material.",
+      "retrieval_latency_s": 0,
+      "generation_latency_s": 12.57,
+      "total_latency_s": 12.57,
+      "input_tokens": 1275,
+      "output_tokens": 361,
+      "tokens_per_sec": 37.2,
+      "avg_similarity_score": 0.8637,
+      "sections_retrieved": [
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "accurate": true,
+      "hallucinated": false,
+      "reason": "The retrieved context discusses philosophy and Marxism but contains no information about CS 111 or computer science teaching methods, so the model correctly states it doesn't know."
+    },
+    {
+      "query": "How many hours of work per week should students allow for CS 111?",
+      "answer": "The retrieved context does not contain any information about CS 111 or recommended work hours for computer science courses. It consists entirely of philosophical discussions about penal systems, proletarian classifications, and popular justice from what appears to be a dialogue between Foucault and other thinkers. There is no mention of academic courses, student work requirements, or computer science education in the provided material.",
+      "retrieval_latency_s": 0,
+      "generation_latency_s": 11.598,
+      "total_latency_s": 11.598,
+      "input_tokens": 1181,
+      "output_tokens": 329,
+      "tokens_per_sec": 37.1,
+      "avg_similarity_score": 1.0099,
+      "sections_retrieved": [
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "accurate": true,
+      "hallucinated": false,
+      "reason": "The model answer correctly states the retrieved context contains no relevant information about CS 111 work hours, as it is exclusively philosophical discourse unrelated to computer science courses."
+    },
+    {
+      "query": "What are the two deadline rules for CS 111 assignments?",
+      "answer": "I don't know. The retrieved context contains philosophical discussions about power, punishment, and historical analysis, including references to \"On Popular Justice\" and \"Prison Talk,\" but contains no information about CS 111 assignments or their deadline rules. The content is entirely focused on Foucault's work related to justice and punishment, not computer science coursework.",
+      "retrieval_latency_s": 0,
+      "generation_latency_s": 12.749,
+      "total_latency_s": 12.749,
+      "input_tokens": 1092,
+      "output_tokens": 369,
+      "tokens_per_sec": 36.2,
+      "avg_similarity_score": 0.9456,
+      "sections_retrieved": [
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "accurate": true,
+      "hallucinated": false,
+      "reason": "The model answer correctly identifies that the retrieved context is unrelated to CS 111 deadlines and does not contain relevant information."
+    },
+    {
+      "query": "What is required to earn full participation credit in CS 111?",
+      "answer": "The provided context contains philosophical dialogue about power and knowledge from Michel Foucault, along with copyright information and a book table of contents. There is no information about CS 111 course requirements or participation credit policies. The context does not contain any relevant details about computer science courses or academic credit systems.",
+      "retrieval_latency_s": 0,
+      "generation_latency_s": 11.338,
+      "total_latency_s": 11.338,
+      "input_tokens": 1282,
+      "output_tokens": 312,
+      "tokens_per_sec": 37.0,
+      "avg_similarity_score": 0.9824,
+      "sections_retrieved": [
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "accurate": true,
+      "hallucinated": false,
+      "reason": "The model answer correctly identifies that the retrieved context, which discusses Foucault's philosophical work, contains no information about CS 111 requirements."
+    },
+    {
+      "query": "Who is the instructor for CS 111 A1/A2 lectures?",
+      "answer": "I don't know who the instructor for CS 111 A1/A2 lectures is because the retrieved context contains no information about computer science courses or instructors. The provided text exclusively discusses philosophical concepts related to Marx and Nietzsche, not university course offerings. There is no mention of computer science programs or their instructors in the retrieved material.",
+      "retrieval_latency_s": 0,
+      "generation_latency_s": 11.816,
+      "total_latency_s": 11.816,
+      "input_tokens": 872,
+      "output_tokens": 357,
+      "tokens_per_sec": 36.6,
+      "avg_similarity_score": 0.9582,
+      "sections_retrieved": [
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "accurate": true,
+      "hallucinated": false,
+      "reason": "The model answer correctly identifies that the retrieved context lacks information about CS 111 A1/A2 instructors, as it is entirely focused on philosophical discussions of Marx and Nietzsche."
+    },
+    {
+      "query": "What does the % operator do in Python?",
+      "answer": "I don't know. The retrieved context contains philosophical and historical information about Foucault, Nietzsche, and Chinese political history, but it does not contain any information about the % operator in Python. The context is unrelated to programming concepts or Python syntax.",
+      "retrieval_latency_s": 0,
+      "generation_latency_s": 12.858,
+      "total_latency_s": 12.858,
+      "input_tokens": 1284,
+      "output_tokens": 343,
+      "tokens_per_sec": 34.7,
+      "avg_similarity_score": 0.9766,
+      "sections_retrieved": [
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "accurate": true,
+      "hallucinated": false,
+      "reason": "The model answer correctly states that the retrieved context lacks information about the % operator in Python, making it accurate and non-hallucinated."
+    },
+    {
+      "query": "What does the / operator always produce in Python, regardless of the operands?",
+      "answer": "The provided context contains philosophical text about Nietzsche, Marx, and concepts of power/knowledge, but it does not contain any information about Python programming or the \"/\" operator. There are no mentions of programming languages, syntax, or operators in the retrieved material. Therefore, based solely on this context, I don't know what the \"/\" operator always produces in Python.",
+      "retrieval_latency_s": 0,
+      "generation_latency_s": 17.337,
+      "total_latency_s": 17.337,
+      "input_tokens": 1277,
+      "output_tokens": 538,
+      "tokens_per_sec": 37.4,
+      "avg_similarity_score": 0.9603,
+      "sections_retrieved": [
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "accurate": true,
+      "hallucinated": false,
+      "reason": "The model answer correctly states the context lacks Python-related information, so it accurately concludes it doesn't know the operator's behavior."
+    },
+    {
+      "query": "What does the // operator do in Python and does it round?",
+      "answer": "The retrieved context does not contain any information about Python programming, the // operator, or rounding operations. The context is entirely focused on philosophical discussions about power, knowledge, and geography from Foucault's interviews, with no mention of programming concepts. Since the provided material lacks relevant information about Python syntax, I don't know the answer to your question.",
+      "retrieval_latency_s": 0,
+      "generation_latency_s": 12.794,
+      "total_latency_s": 12.794,
+      "input_tokens": 1207,
+      "output_tokens": 382,
+      "tokens_per_sec": 37.8,
+      "avg_similarity_score": 0.9535,
+      "sections_retrieved": [
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "accurate": true,
+      "hallucinated": false,
+      "reason": "The reference answer correctly describes the // operator as integer division that discards fractional parts without rounding."
+    },
+    {
+      "query": "What are the two types of homework problems in CS 111?",
+      "answer": "I don't know. The retrieved context contains an interview with Foucault discussing his work \"Discipline and Punish\" and copyright information, but contains no information about CS 111 or computer science homework problems. The context is entirely about historical and philosophical topics, not computer science education.",
+      "retrieval_latency_s": 0,
+      "generation_latency_s": 10.469,
+      "total_latency_s": 10.469,
+      "input_tokens": 1223,
+      "output_tokens": 294,
+      "tokens_per_sec": 38.1,
+      "avg_similarity_score": 0.894,
+      "sections_retrieved": [
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "accurate": false,
+      "hallucinated": true,
+      "reason": "The retrieved context is entirely about Foucault's work and has no information about CS 111 homework problems, so the reference answer is hallucinated."
+    },
+    {
+      "query": "What is a local variable in Python according to CS 111?",
+      "answer": "The retrieved context does not contain any information about Python programming, local variables, or CS 111. It consists of philosophical and political theory content discussing the Red Army, Cultural Revolution, power structures, and spatial metaphors. There is no mention of computer science concepts or programming language terminology in the provided material.",
+      "retrieval_latency_s": 0,
+      "generation_latency_s": 12.578,
+      "total_latency_s": 12.578,
+      "input_tokens": 1183,
+      "output_tokens": 378,
+      "tokens_per_sec": 38.0,
+      "avg_similarity_score": 0.8849,
+      "sections_retrieved": [
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "accurate": true,
+      "hallucinated": false,
+      "reason": "The reference answer correctly defines local variables in Python as per standard programming knowledge taught in CS 111."
+    },
+    {
+      "query": "What is a global variable and can it be used inside a function?",
+      "answer": "The retrieved context does not contain any information about global variables or programming concepts. It consists solely of philosophical and geographical discourse discussing French phenomena, spatial metaphors, and references to Marx and Nietzsche. Since the context provides no relevant information about programming variables or function usage, I don't know the answer to your question.",
+      "retrieval_latency_s": 0,
+      "generation_latency_s": 10.558,
+      "total_latency_s": 10.558,
+      "input_tokens": 1099,
+      "output_tokens": 307,
+      "tokens_per_sec": 38.0,
+      "avg_similarity_score": 0.9422,
+      "sections_retrieved": [
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "accurate": true,
+      "hallucinated": false,
+      "reason": "The retrieved context contains no programming information, so the model correctly states it cannot answer the question."
+    },
+    {
+      "query": "Where are variables stored in memory according to CS 111?",
+      "answer": "I don't know the answer to where variables are stored in memory according to CS 111. The retrieved context contains philosophical and political theory content from Foucault's work on power and justice, with no information about computer science concepts, memory storage, or CS 111 course material. The provided text discusses Liberation courts and popular justice rather than programming concepts.",
+      "retrieval_latency_s": 0,
+      "generation_latency_s": 11.239,
+      "total_latency_s": 11.239,
+      "input_tokens": 1165,
+      "output_tokens": 309,
+      "tokens_per_sec": 37.1,
+      "avg_similarity_score": 0.9655,
+      "sections_retrieved": [
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "accurate": true,
+      "hallucinated": false,
+      "reason": "The model answer correctly states that the retrieved context contains no relevant information about CS 111 or memory storage."
+    },
+    {
+      "query": "What version of Python does CS 111 use?",
+      "answer": "I don't know the answer to what version of Python CS 111 uses because the provided context contains no information about computer science courses, Python programming, or any related details. The retrieved context primarily discusses Jeremy Bentham's Panopticon, political analysis of the Chinese Cultural Revolution, and academic acknowledgments from Colin Gordon. There is no mention of programming languages, computer science courses, or Python versions in any of the provided material.",
+      "retrieval_latency_s": 0,
+      "generation_latency_s": 10.65,
+      "total_latency_s": 10.65,
+      "input_tokens": 639,
+      "output_tokens": 356,
+      "tokens_per_sec": 38.9,
+      "avg_similarity_score": 0.8391,
+      "sections_retrieved": [
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "accurate": true,
+      "hallucinated": false,
+      "reason": "The model answer correctly identifies that the retrieved context lacks information about CS 111 or Python versions, focusing only on unrelated academic content about Bentham and Chinese political analysis."
+    },
+    {
+      "query": "What is a string in Python?",
+      "answer": "I don't know. The provided context discusses philosophical concepts about Marx, Nietzsche, and historical analysis, but contains no information about Python programming or strings in Python. The retrieved text focuses on political theory rather than computer science topics.",
+      "retrieval_latency_s": 0,
+      "generation_latency_s": 8.519,
+      "total_latency_s": 8.519,
+      "input_tokens": 1176,
+      "output_tokens": 228,
+      "tokens_per_sec": 38.4,
+      "avg_similarity_score": 0.9382,
+      "sections_retrieved": [
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "accurate": true,
+      "hallucinated": false,
+      "reason": "The retrieved context is entirely unrelated to Python programming concepts, correctly stating it focuses on philosophical and political theory rather than computer science."
+    },
+    {
+      "query": "What is the syntax for a list comprehension with a filter condition in Python?",
+      "answer": "The provided context contains no information about Python programming syntax or list comprehensions. It focuses exclusively on philosophical discussions about Marx, Ricardo, Foucault, and historical analysis. None of the retrieved text addresses programming concepts or Python syntax.",
+      "retrieval_latency_s": 0,
+      "generation_latency_s": 8.558,
+      "total_latency_s": 8.558,
+      "input_tokens": 1183,
+      "output_tokens": 232,
+      "tokens_per_sec": 38.7,
+      "avg_similarity_score": 1.043,
+      "sections_retrieved": [
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "accurate": true,
+      "hallucinated": false,
+      "reason": "The model answer correctly states the retrieved context is unrelated to Python syntax, containing only philosophical discussions."
+    },
+    {
+      "query": "What is a common mistake when using 'and' or 'or' in Python conditionals?",
+      "answer": "The provided context doesn't contain any information about Python programming or conditional statements. It consists entirely of philosophical academic text about Foucault, Marx, and Nietzsche, with acknowledgments and references to journal publications. There is no relevant information to answer your question about programming mistakes in Python conditionals.",
+      "retrieval_latency_s": 0,
+      "generation_latency_s": 10.78,
+      "total_latency_s": 10.78,
+      "input_tokens": 963,
+      "output_tokens": 335,
+      "tokens_per_sec": 39.0,
+      "avg_similarity_score": 0.965,
+      "sections_retrieved": [
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "accurate": true,
+      "hallucinated": false,
+      "reason": "The model answer accurately states that the retrieved context is unrelated to Python programming and contains no relevant information for the question."
+    },
+    {
+      "query": "What does range(low, high) produce in Python?",
+      "answer": "I don't know. The retrieved context contains philosophical and academic discussions about power, knowledge, and geography, but it does not mention anything about Python programming or the range() function. There is no relevant information about what range(low, high) produces in Python within this context.",
+      "retrieval_latency_s": 0,
+      "generation_latency_s": 9.423,
+      "total_latency_s": 9.423,
+      "input_tokens": 1180,
+      "output_tokens": 266,
+      "tokens_per_sec": 38.8,
+      "avg_similarity_score": 0.8649,
+      "sections_retrieved": [
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "accurate": true,
+      "hallucinated": false,
+      "reason": "The model answer correctly identifies that the retrieved context lacks information about the Python range function."
+    },
+    {
+      "query": "What are the two steps taken when an assignment statement executes in Python?",
+      "answer": "The retrieved context contains no information about Python programming or assignment statements. It appears to be academic text related to philosophy, political theory, and spatial concepts. There is no mention of programming languages, computer science concepts, or execution steps for assignment statements in Python.",
+      "retrieval_latency_s": 0,
+      "generation_latency_s": 8.476,
+      "total_latency_s": 8.476,
+      "input_tokens": 959,
+      "output_tokens": 255,
+      "tokens_per_sec": 39.7,
+      "avg_similarity_score": 0.9272,
+      "sections_retrieved": [
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "accurate": true,
+      "hallucinated": true,
+      "reason": "The retrieved context contains no information about Python programming or assignment statements."
+    }
+  ]
+}

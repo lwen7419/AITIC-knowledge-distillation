@@ -1,0 +1,435 @@
+{
+  "condition": "recursive_biology",
+  "summary": {
+    "n_queries": 20,
+    "hit5_pct": 65.0,
+    "hallucination_pct": 25.0,
+    "avg_gen_latency_s": 11.791,
+    "avg_tokens_per_sec": 37.8,
+    "avg_input_tokens": 1091,
+    "avg_output_tokens": 347,
+    "avg_similarity": 0.9318
+  },
+  "results": [
+    {
+      "query": "What did C.B. Van Niel use instead of water in his photosynthesis experiments?",
+      "answer": "I don't know. The retrieved context contains philosophical discussions about Marx, Nietzsche, power relations, and historical methodology, but it does not mention C.B. Van Niel or his photosynthesis experiments. There is no information about what substances he might have used instead of water in his scientific work.",
+      "retrieval_latency_s": 0,
+      "generation_latency_s": 14.969,
+      "total_latency_s": 14.969,
+      "input_tokens": 1214,
+      "output_tokens": 384,
+      "tokens_per_sec": 33.9,
+      "avg_similarity_score": 0.8695,
+      "sections_retrieved": [
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "accurate": true,
+      "hallucinated": false,
+      "reason": "The model answer correctly identifies that the retrieved context, which discusses philosophy and Marx, does not contain information about C.B. Van Niel's experiments."
+    },
+    {
+      "query": "What is the photosynthesis equation proposed after glucose was identified as a product?",
+      "answer": "The retrieved context does not contain any information about photosynthesis equations or glucose identification. It focuses exclusively on political philosophy discussions regarding Marxism, the body, and revolutionary processes, with no scientific or biological content. The provided material does not address photosynthesis or its chemical representation.",
+      "retrieval_latency_s": 0,
+      "generation_latency_s": 12.059,
+      "total_latency_s": 12.059,
+      "input_tokens": 983,
+      "output_tokens": 370,
+      "tokens_per_sec": 37.7,
+      "avg_similarity_score": 0.7644,
+      "sections_retrieved": [
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "accurate": true,
+      "hallucinated": false,
+      "reason": "The model answer correctly identifies the retrieved context as solely focused on political philosophy with no scientific content about photosynthesis."
+    },
+    {
+      "query": "Who named the green substance in plants 'chlorophyll' and in what year?",
+      "answer": "I don't know the answer to your question. The provided context contains no information about chlorophyll or its naming history. The retrieved texts discuss Foucault's work on power and knowledge, May 1968 events, and political philosophy, but there is no mention of plant biology or scientific nomenclature related to chlorophyll.",
+      "retrieval_latency_s": 0,
+      "generation_latency_s": 12.592,
+      "total_latency_s": 12.592,
+      "input_tokens": 981,
+      "output_tokens": 384,
+      "tokens_per_sec": 36.9,
+      "avg_similarity_score": 0.9483,
+      "sections_retrieved": [
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "accurate": true,
+      "hallucinated": false,
+      "reason": "The model answer correctly identifies the absence of chlorophyll-related information in the retrieved context."
+    },
+    {
+      "query": "Who first isolated whole chloroplasts for laboratory study and in what year?",
+      "answer": "I don't know. The provided context discusses surveillance systems, Foucault's work on prisons, and Marxist theory, but contains no information about chloroplast isolation or biological research. There are no references to plant biology, chloroplasts, or laboratory studies related to them in the retrieved material.",
+      "retrieval_latency_s": 0,
+      "generation_latency_s": 9.159,
+      "total_latency_s": 9.159,
+      "input_tokens": 1003,
+      "output_tokens": 276,
+      "tokens_per_sec": 39.9,
+      "avg_similarity_score": 0.9037,
+      "sections_retrieved": [
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "accurate": false,
+      "hallucinated": true,
+      "reason": "The retrieved context contains no information about chloroplast isolation or biological research."
+    },
+    {
+      "query": "Where do light reactions of photosynthesis take place inside the chloroplast?",
+      "answer": "The retrieved context contains no information about photosynthesis, chloroplasts, or biological processes. It is entirely focused on political theory, power structures, and Soviet society. Therefore, I cannot answer this question based on the provided context.",
+      "retrieval_latency_s": 0,
+      "generation_latency_s": 12.673,
+      "total_latency_s": 12.673,
+      "input_tokens": 1186,
+      "output_tokens": 347,
+      "tokens_per_sec": 35.7,
+      "avg_similarity_score": 0.9855,
+      "sections_retrieved": [
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "accurate": true,
+      "hallucinated": false,
+      "reason": "The reference answer accurately describes the location of light reactions in photosynthesis as the grana."
+    },
+    {
+      "query": "Where do the light-independent (dark) reactions of photosynthesis occur?",
+      "answer": "I don't know. The retrieved context discusses political theory, power dynamics, and Marxist concepts related to the State apparatus and class struggle, but contains no information about photosynthesis or the location of light-independent reactions. The text focuses entirely on political philosophy rather than biological processes. There is no relevant content about plant biology or photosynthesis in the provided material.",
+      "retrieval_latency_s": 0,
+      "generation_latency_s": 12.498,
+      "total_latency_s": 12.498,
+      "input_tokens": 1005,
+      "output_tokens": 377,
+      "tokens_per_sec": 37.1,
+      "avg_similarity_score": 0.9971,
+      "sections_retrieved": [
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "accurate": false,
+      "hallucinated": true,
+      "reason": "The retrieved context discusses political theory and contains no information about photosynthesis, so it cannot provide an accurate answer and would lead to hallucinated claims."
+    },
+    {
+      "query": "What is the presence of starch in a leaf indicated by when tested with iodine?",
+      "answer": "The retrieved context does not contain any information about starch in leaves or iodine tests. It consists entirely of philosophical discussions about Marxism, psychoanalysis, and geography. There is no mention of biological testing procedures or plant science content in the provided text.",
+      "retrieval_latency_s": 0,
+      "generation_latency_s": 10.058,
+      "total_latency_s": 10.058,
+      "input_tokens": 1083,
+      "output_tokens": 299,
+      "tokens_per_sec": 38.9,
+      "avg_similarity_score": 0.9543,
+      "sections_retrieved": [
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "accurate": true,
+      "hallucinated": false,
+      "reason": "The reference answer correctly states the standard biochemical result of the iodine test for starch in leaves."
+    },
+    {
+      "query": "What percentage of oxygen is in inhaled air versus exhaled air according to the textbook table?",
+      "answer": "I don't have any information about oxygen percentages in inhaled versus exhaled air in the provided context. The retrieved text consists solely of excerpts from philosophical discussions about Foucault's work, including topics like power relations, the body, and prison studies. There is no content related to respiratory physiology, oxygen measurements, or medical tables in the given material.",
+      "retrieval_latency_s": 0,
+      "generation_latency_s": 10.358,
+      "total_latency_s": 10.358,
+      "input_tokens": 846,
+      "output_tokens": 335,
+      "tokens_per_sec": 39.6,
+      "avg_similarity_score": 0.9149,
+      "sections_retrieved": [
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "accurate": true,
+      "hallucinated": false,
+      "reason": "The model answer correctly states the retrieved context lacks respiratory physiology information"
+    },
+    {
+      "query": "What percentage of carbon dioxide is in inhaled air versus exhaled air?",
+      "answer": "I don't know. The retrieved context discusses Foucault's concepts about body politics and power relations, but it doesn't contain any information about carbon dioxide percentages in inhaled versus exhaled air. The provided text focuses on historical political systems and the relationship between bodies and state apparatus, not physiological respiratory data.",
+      "retrieval_latency_s": 0,
+      "generation_latency_s": 10.958,
+      "total_latency_s": 10.958,
+      "input_tokens": 1019,
+      "output_tokens": 332,
+      "tokens_per_sec": 39.0,
+      "avg_similarity_score": 1.017,
+      "sections_retrieved": [
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "accurate": false,
+      "hallucinated": true,
+      "reason": "The retrieved context does not contain any information about carbon dioxide percentages in inhaled or exhaled air."
+    },
+    {
+      "query": "What is the total lung capacity of a human being and how much air is normally inhaled or exhaled at rest?",
+      "answer": "I don't know the answer to your question. The retrieved context only contains information about Foucault's philosophical work on power, knowledge, and bodily control, with discussions about \"quadrillage\" (networks of control) and power's investment in the body. The context does not contain any medical or physiological information about human lung capacity or breathing rates at rest.",
+      "retrieval_latency_s": 0,
+      "generation_latency_s": 11.078,
+      "total_latency_s": 11.078,
+      "input_tokens": 1076,
+      "output_tokens": 345,
+      "tokens_per_sec": 39.6,
+      "avg_similarity_score": 0.8394,
+      "sections_retrieved": [
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "accurate": false,
+      "hallucinated": true,
+      "reason": "The retrieved context only contains philosophical content about Foucault and no medical information on lung capacity or breathing rates."
+    },
+    {
+      "query": "How much energy does each ATP molecule give?",
+      "answer": "The retrieved context does not contain any information about ATP molecules or the energy they provide. This text focuses on political theory, power dynamics, and bodily control rather than biochemistry. I don't know the energy value of ATP based on the provided context.",
+      "retrieval_latency_s": 0,
+      "generation_latency_s": 9.21,
+      "total_latency_s": 9.21,
+      "input_tokens": 1005,
+      "output_tokens": 277,
+      "tokens_per_sec": 39.6,
+      "avg_similarity_score": 0.9261,
+      "sections_retrieved": [
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "accurate": true,
+      "hallucinated": false,
+      "reason": "The context is exclusively about political theory and bodily control, not biochemistry, so it lacks ATP information."
+    },
+    {
+      "query": "Who invented the stethoscope and in what year?",
+      "answer": "I don't know the answer based on the provided context. The retrieved text discusses surveillance systems, prison memoirs, and medical history but does not mention the stethoscope or its invention. None of the content contains information about who invented the stethoscope or the year it was invented.",
+      "retrieval_latency_s": 0,
+      "generation_latency_s": 11.628,
+      "total_latency_s": 11.628,
+      "input_tokens": 1048,
+      "output_tokens": 359,
+      "tokens_per_sec": 38.6,
+      "avg_similarity_score": 0.9294,
+      "sections_retrieved": [
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "accurate": true,
+      "hallucinated": false,
+      "reason": "The model answer correctly states that the retrieved context does not contain information about the stethoscope's invention."
+    },
+    {
+      "query": "What are the dimensions of a human kidney?",
+      "answer": "I don't know. The retrieved context discusses political theory, judicial systems, and philosophical concepts about bodies in society, but contains no information about human anatomy or the dimensions of kidneys. The content focuses on topics like \"popular justice,\" \"people's courts,\" and the \"body of society\" as political entities, not medical or anatomical details.",
+      "retrieval_latency_s": 0,
+      "generation_latency_s": 11.296,
+      "total_latency_s": 11.296,
+      "input_tokens": 1219,
+      "output_tokens": 330,
+      "tokens_per_sec": 38.5,
+      "avg_similarity_score": 0.9784,
+      "sections_retrieved": [
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "accurate": true,
+      "hallucinated": false,
+      "reason": "The retrieved context discusses political theory and judicial systems, not anatomical details, making the model answer accurate and non-hallucinated."
+    },
+    {
+      "query": "Why is the right kidney placed lower than the left kidney?",
+      "answer": "I don't know. The provided context discusses spatial arrangements in courts and judicial systems, but contains no information about human anatomy or kidney placement. The retrieved text focuses exclusively on legal proceedings, judicial positioning, and related political commentary, with no mention of medical or anatomical facts about the human body.",
+      "retrieval_latency_s": 0,
+      "generation_latency_s": 10.449,
+      "total_latency_s": 10.449,
+      "input_tokens": 1309,
+      "output_tokens": 292,
+      "tokens_per_sec": 38.4,
+      "avg_similarity_score": 0.8815,
+      "sections_retrieved": [
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "accurate": true,
+      "hallucinated": false,
+      "reason": "The model answer correctly states the retrieved context is about judicial spatial arrangements with no anatomical information."
+    },
+    {
+      "query": "What is the storage capacity of the urinary bladder?",
+      "answer": "The retrieved context does not contain any information about the storage capacity of the urinary bladder. The provided material consists of philosophical discussions about power, justice, and Foucault's concepts, with no medical or anatomical information about the human body's urinary system. There is no relevant data in the context to answer this question.",
+      "retrieval_latency_s": 0,
+      "generation_latency_s": 9.254,
+      "total_latency_s": 9.254,
+      "input_tokens": 1138,
+      "output_tokens": 245,
+      "tokens_per_sec": 37.5,
+      "avg_similarity_score": 0.9374,
+      "sections_retrieved": [
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "accurate": false,
+      "hallucinated": false,
+      "reason": "The retrieved context is a philosophical discussion about power and justice with no medical information on urinary bladder capacity."
+    },
+    {
+      "query": "What percentage of water does normal urine contain?",
+      "answer": "The retrieved context does not contain any information about the water content in normal urine. It primarily discusses Michel Foucault's philosophical analysis of the body in political systems, focusing on historical comparisons between monarchy and republics, and the evolution of disciplinary power. None of the provided material addresses medical or physiological facts about urine composition.",
+      "retrieval_latency_s": 0,
+      "generation_latency_s": 11.193,
+      "total_latency_s": 11.193,
+      "input_tokens": 1347,
+      "output_tokens": 309,
+      "tokens_per_sec": 37.7,
+      "avg_similarity_score": 1.0313,
+      "sections_retrieved": [
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "accurate": true,
+      "hallucinated": false,
+      "reason": "The reference answer correctly states that normal urine contains approximately 96% water."
+    },
+    {
+      "query": "How long does each dialysis session last?",
+      "answer": "The retrieved context does not contain any information about dialysis sessions or their duration. The text discusses academic research, power dynamics, and institutional control rather than medical procedures. There are no mentions of dialysis treatments or related medical information in the provided lecture excerpts.",
+      "retrieval_latency_s": 0,
+      "generation_latency_s": 11.596,
+      "total_latency_s": 11.596,
+      "input_tokens": 1231,
+      "output_tokens": 331,
+      "tokens_per_sec": 37.4,
+      "avg_similarity_score": 1.0156,
+      "sections_retrieved": [
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "accurate": true,
+      "hallucinated": false,
+      "reason": "The retrieved context is an academic lecture about research and power dynamics with no medical information about dialysis sessions."
+    },
+    {
+      "query": "What are the four stages of urine formation in the nephron?",
+      "answer": "I don't know the answer because the retrieved context contains no information about urine formation stages in the nephron. The provided text discusses philosophical concepts related to Foucault's work on medicine, social work, and political systems, not biological processes. The context mentions \"nephron\" only in a general reference within what appears to be a book preface, without explaining any physiological functions.",
+      "retrieval_latency_s": 0,
+      "generation_latency_s": 12.801,
+      "total_latency_s": 12.801,
+      "input_tokens": 943,
+      "output_tokens": 395,
+      "tokens_per_sec": 37.4,
+      "avg_similarity_score": 0.9305,
+      "sections_retrieved": [
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "accurate": false,
+      "hallucinated": true,
+      "reason": "The model answer incorrectly states that the retrieved context mentions 'nephron', but it does not appear in the provided text."
+    },
+    {
+      "query": "Which organisms are the first to have excretory structures according to the textbook?",
+      "answer": "I don't know the answer because the retrieved context contains no information about biological organisms or excretory structures. The context is entirely focused on Foucault's philosophical work, specifically discussing his concepts related to power, discourse, and bodily politics. There is no mention of evolutionary biology or anatomical developments in the provided excerpts.",
+      "retrieval_latency_s": 0,
+      "generation_latency_s": 17.621,
+      "total_latency_s": 17.621,
+      "input_tokens": 1008,
+      "output_tokens": 548,
+      "tokens_per_sec": 36.7,
+      "avg_similarity_score": 0.8094,
+      "sections_retrieved": [
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "accurate": true,
+      "hallucinated": false,
+      "reason": "The retrieved context contains no biological information relevant to the question about excretory structures."
+    },
+    {
+      "query": "What enzyme is secreted by salivary glands and what does pepsin act on?",
+      "answer": "The retrieved context does not contain any information about enzymes secreted by salivary glands or the function of pepsin. The context focuses exclusively on political philosophy, the role of the body in power structures, and medical discourse as discussed in Foucault's work. No biological or digestive information is present in the provided text.",
+      "retrieval_latency_s": 0,
+      "generation_latency_s": 14.367,
+      "total_latency_s": 14.367,
+      "input_tokens": 1183,
+      "output_tokens": 402,
+      "tokens_per_sec": 34.9,
+      "avg_similarity_score": 1.0015,
+      "sections_retrieved": [
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "accurate": false,
+      "hallucinated": false,
+      "reason": "The retrieved context is entirely about political philosophy and does not contain any biological information related to enzymes or pepsin."
+    }
+  ]
+}

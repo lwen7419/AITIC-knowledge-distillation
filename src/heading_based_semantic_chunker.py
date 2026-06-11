@@ -9,9 +9,9 @@ def semantic_chunk(docs, max_chunk_size=500):
     #OR up to 50 char, with 1+ '=' chars, which is underline beneath heading title of plain text docs
     heading_pattern = r'\n#{1,3} .+|\n[A-Z][^\n]{0,50}\n[-=]+'
     #split string into list, using regex heading_pattern specified above as separator
-    sections = re.split(heading_pattern, text)
+    sections = re.split(heading_pattern, docs)
     #searches through string and return list of all matches to heading_pattern (i.e., list of headings)
-    headings = re.findall(heading_pattern, text)
+    headings = re.findall(heading_pattern, docs)
     #if no heading for one section, assume it is intro section and add section 
     if len(sections)>len(headings):
         headings.insert(0, "Introduction")
