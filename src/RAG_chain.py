@@ -23,12 +23,15 @@ def ask(query, k=5):
     )
     #return response of llm using previously written prompt
     #return hits too
-    return environment.model.invoke([("system", system_message), ("human", query)]), hits
+    llm_response = environment.model.invoke([("system", system_message), ("human", query)])
+    chunks = [doc for doc, _ in hits]
+    cited_response = format_answer_with_citations(llm_response, chunks)
+    return llm_response, cited_response, hits
 
 if __name__ == "__main__":
     #sample question
     query = "What is task decomposition?"
     #response shows up in stream
     #store llm response
-    response, _ = ask(query)
-    print(response.content)
+    _, cited_response, _ = ask(query)
+    print(cited_response)

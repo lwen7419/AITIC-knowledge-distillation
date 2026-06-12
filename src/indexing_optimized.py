@@ -1,7 +1,7 @@
 import environment
 
 #clear existing collection so recursive and semantic chunks don't mix
-environment.vector_store.delete_collection()
+environment.vector_store.reset_collection()
 
 from langchain_community.document_loaders import PyPDFLoader
 
@@ -20,7 +20,7 @@ from langchain_core.documents import Document
 
 all_splits = []
 for doc in docs:
-    chunks = semantic_chunk(doc.page_content, max_chunk_size = 300)
+    chunks = semantic_chunk(doc.page_content, max_chunk_size = 200)
     for chunk in chunks:
         all_splits.append(Document(
             page_content=chunk.pop("text"),

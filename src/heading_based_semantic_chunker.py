@@ -26,7 +26,7 @@ def semantic_chunk(docs, max_chunk_size=500):
             #for each split paragraph in section 
             for j, para, in enumerate(paragraphs):
                 #if there is actual content
-                if para.strip():
+                if para.strip() and len(para) < max_chunk_size:
                     #add paragraph metadata as new dictionary item in chunks
                     chunks.append({
                         "text": para.strip(),
@@ -34,6 +34,35 @@ def semantic_chunk(docs, max_chunk_size=500):
                         "chunk_type": "paragraph", #saves chunk type as paragraph
                         "paragraph_index": j #saves paragraph number as paragraph index
                     })
+                elif para.strip():
+                    # Step 3: paragraph still too long, split at nearest punctuation to limit
+                    text = para.strip()
+                    start = 0
+                    sub_index = 0
+                    while start < len(text):
+                        end = start + max_chunk_size
+                        if end >= len(text):
+                            chunk_text = text[start:]
+                        else:
+                            # scan backwards for punctuation within limit
+                            cut = end
+                            while cut > start and text[cut] not in '.?!':
+                                cut -= 1
+                            if cut == start:
+                                # no punctuation before limit, scan forward for nearest one
+                                cut = end
+                                while cut < len(text) and text[cut] not in '.?!':
+                                    cut += 1
+                            chunk_text = text[start:cut + 1]
+                        if chunk_text.strip():
+                            chunks.append({
+                                "text": chunk_text.strip(),
+                                "section": heading.strip(),
+                                "chunk_type": "paragraph",
+                                "paragraph_index": j,
+                            })
+                        start += len(chunk_text)
+                        sub_index += 1
         #if not long section compared to max_chunk_size
         else:
             #if section content not empty
@@ -45,5 +74,4 @@ def semantic_chunk(docs, max_chunk_size=500):
                     "chunk_type": "section" #saves chunk type as section
                     #no paragraph_index
                 })
-    
     return chunks
