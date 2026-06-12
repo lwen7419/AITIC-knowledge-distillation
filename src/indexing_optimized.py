@@ -6,7 +6,8 @@ environment.vector_store.delete_collection()
 from langchain_community.document_loaders import PyPDFLoader
 
 #pdf reader, makes list of docs
-loader = PyPDFLoader("/Users/lidasmac/Desktop/Foucault_Michel_Power_Knowledge_Selected_Interviews_and_Other_Writings_1972-1977.pdf")
+doc_name = "data/cs111_coursepack.pdf"
+loader = PyPDFLoader(doc_name)
 docs = loader.load()
 
 #check first page character count and give first 500 char preview of first page
@@ -19,14 +20,14 @@ from langchain_core.documents import Document
 
 all_splits = []
 for doc in docs:
-    chunks = semantic_chunk(doc.page_content, max_chunk_size = 1000)
+    chunks = semantic_chunk(doc.page_content, max_chunk_size = 300)
     for chunk in chunks:
         all_splits.append(Document(
             page_content=chunk.pop("text"),
             metadata={**doc.metadata, **chunk}
         ))
 
-print(f"Split blog post into {len(all_splits)} sub-documents.")
+print(f"Split {doc_name} into {len(all_splits)} sub-documents.")
 
 ##Storing
 #add all_splits into previously specified vectorDB
