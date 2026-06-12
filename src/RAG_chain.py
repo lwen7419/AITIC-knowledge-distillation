@@ -1,6 +1,7 @@
 # Based on LangChain documentation example:
 # https://python.langchain.com/docs/integrations/vectorstores/chroma/
 import environment
+from citations import format_answer_with_citations
 
 #method that searches vectorDB for relevant chunks and sends message with chunks as context
 #returns (response, hits) so eval can extract token metadata and similarity scores
