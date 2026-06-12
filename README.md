@@ -64,6 +64,8 @@ might change later.
 Chose chain approach with @dynamic_prompt middleware over agent+tool. 
 Single LLM call per query reduces latency on consumer hardware. 
 Agent approach is a planned upgrade for multi-step queries.
+Will also make citations inline instead for clarity
+and learning purposes later during agent approach upgrade. 
 
 ### Local Inference
 All inference runs locally via Ollama, no external API calls. 
