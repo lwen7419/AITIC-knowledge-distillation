@@ -1,5 +1,8 @@
 #takes llm's answer and retrieved chunks as argument
 def format_answer_with_citations(answer, retrieved_docs):
+    #hardcode no reference found would not return sources"
+    if "[No reference found]" in answer:
+        return answer
     #empty list to collect citation strings
     sources = []
     #loop over chunks; for each chunk...
