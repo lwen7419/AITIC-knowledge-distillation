@@ -33,12 +33,21 @@ print(f"Split {doc_name} into {len(all_splits)} sub-documents.")
 from extract_images import extract_images_from_pdf
 from vision_parsing import parse_image
 
+#set images variable to extract images from document originally read
 images = extract_images_from_pdf(doc_name)
+#print how many images found
 print(f"Found {len(images)} images")
+#for image in images
 for img in images:
+    #send raw image bytes to be parsed into text description
     caption = parse_image(img["data"], ext=img["ext"])
+    #makes caption into Document object to be stored in ChromaDB
     all_splits.append(Document(
+        #page content now stores text description of image
         page_content=caption,
+        #need source name, page, and type in ChromaDB so citations
+        #N.B., we do not necessarily need these arguments, ChromaDB 
+        # takes any metadata
         metadata={"source": doc_name, "page": img["page"], "type": "image"}
     ))
 
