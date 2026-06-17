@@ -11,11 +11,21 @@ def parse_image(image_data, ext="jpeg"):
     #langchain calls llm imported from environment
     #with images as base64 encoded string representation
     response = model.invoke([{
+        #set role to human to specify that this is user input
         "role": "human",
-        "content": [{
+        #list with two items to be sent to model
+        "content": 
+        #set to image_url which signals to langchain
+        # that block contains image and the image_url is dict 
+        # with url key holding the actual image
+        [{
             "type": "image_url",
             "image_url": {"url": f"data:image/{ext};base64,{encoded}"}
-        }, {
+        },
+        #second item is text prompt with type set to text signaling
+        #  prompt is plain text and text holds actual prompt string telling 
+        # model what to do with the image
+        {
             "type": "text",
             "text": "Describe this chart or diagram in detail, preserving all data and structure"
         }]
