@@ -29,6 +29,21 @@ for doc in docs:
 
 print(f"Split {doc_name} into {len(all_splits)} sub-documents.")
 
+##Image parsing
+from extract_images import extract_images_from_pdf
+from vision_parsing import parse_image
+
+images = extract_images_from_pdf(doc_name)
+print(f"Found {len(images)} images")
+for img in images:
+    caption = parse_image(img["data"], ext=img["ext"])
+    all_splits.append(Document(
+        page_content=caption,
+        metadata={"source": doc_name, "page": img["page"], "type": "image"}
+    ))
+
+print(f"Total chunks including images: {len(all_splits)}")
+
 ##Storing
 #add all_splits into previously specified vectorDB
 document_ids = environment.vector_store.add_documents(documents=all_splits)
