@@ -26,3 +26,8 @@ def extract_images_from_pdf(pdf_path):
                 "ext": base_image["ext"]
             })
     return images
+
+if __name__ == "__main__":
+    pdf_path = "data/TS-SCERT-Class-10-Biology-Textbook-in-English-Medium.pdf"
+    images = extract_images_from_pdf(pdf_path)
+    print(f"Found {len(images)} images")
