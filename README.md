@@ -3,7 +3,7 @@ Local-first RAG pipeline that distills textbooks into verifiable, citation-groun
 
 ## Installation
 ### Prerequisites
-- macOS (Apple Silicon) or Linux — Windows untested
+- macOS (Apple Silicon)
 - [Ollama](https://ollama.com) installed and running
 - Python 3.10+ (Anaconda recommended)
 ### Setup
