@@ -34,7 +34,7 @@ def ask(query, k=5):
 
 if __name__ == "__main__":
     #sample question
-    query = "What is art?"
+    query = "What is the first image in this pdf?"
     #response shows up in stream
     #store llm response
     cited_response, _ = ask(query)
