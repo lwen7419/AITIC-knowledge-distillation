@@ -12,6 +12,9 @@ def extract_images_from_pdf(pdf_path):
         #.get_images() is PyMuPDF method returning list 
         #of image unique id from that page
         for img in page.get_images():
+            #filter for decorative elements
+            if len(img["data"]) < 5000:
+                continue
             #set xref to unique ID for image object inside file
             xref = img[0]
             #takes xref and goes into pdf's object table
