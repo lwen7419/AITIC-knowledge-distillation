@@ -8,6 +8,9 @@ from citations import format_answer_with_citations
 def ask(query, k=5):
     #sends query and k into ChromaDB's similarity search method and returns k closest matches and their similarity scores as list of tuples
     hits = environment.vector_store.similarity_search_with_score(query, k=k)
+    #rerank hits using PyTorch cross-encoder — rescores each (query, chunk) pair together
+    #so the LLM receives the most relevant chunks first regardless of embedding similarity order
+    hits = environment.reranker.rerank(query, hits)
     #takes chunks into string with double newline between each chunk
     #unpacks each tuple in hits to only take chunks not scoree
     docs_content = "\n\n".join(doc.page_content for doc, _ in hits)

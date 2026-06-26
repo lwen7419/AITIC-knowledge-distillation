@@ -14,3 +14,7 @@ vector_store = Chroma(
     embedding_function=embeddings,
     persist_directory="./chroma_langchain_db",
 )
+
+#import PyTorch cross-encoder for reranking retrieved chunks before passing to LLM
+from reranker import CrossEncoderReranker
+reranker = CrossEncoderReranker()
