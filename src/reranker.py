@@ -18,12 +18,13 @@ class CrossEncoderReranker:
     def rerank(self, query, hits):
         #builds list of (query, chunk_text) pairs, throw away previous embedding 
         # scores
-        pairs = [(query, doc.page_content) for doc, _ in hits]
+        chunks = [doc.page_content for doc, _ in hits]
         #tokenize all pairs in single batch 
         features = self.tokenizer(
-            #first list is all queries, second list is chunk texts
-            [p[0] for p in pairs],
-            [p[1] for p in pairs],
+            #query repeated to match chunk number
+            [query] * len(hits),
+            #list of chunks
+            chunks,
             #make all inputs same length by adding padding tokens to shorter ones
             padding=True,
             #cut off anything larger than max_length, which is max tokens model 
