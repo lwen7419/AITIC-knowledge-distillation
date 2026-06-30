@@ -36,12 +36,12 @@ def ask(query, k=3):
     llm_response = environment.model.invoke([("system", system_message), ("human", query)])
     chunks = [doc for doc, _ in hits]
     cited_response = format_answer_with_citations(llm_response.content, chunks)
-    return cited_response, hits
+    return cited_response, llm_response, hits
 
 if __name__ == "__main__":
     #sample question
     query = "What course is this text teaching?"
     #response shows up in stream
     #store llm response
-    cited_response, _ = ask(query)
+    cited_response, _, __ = ask(query)
     print(cited_response)

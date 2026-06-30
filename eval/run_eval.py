@@ -1,13 +1,14 @@
 import json, os, sys, time, statistics
 
-# adds src/ to the Python path so imports like environment and RAG_chain work
-# regardless of which directory the script is run from
+#find absolute file path to current file (run_eval), strips file name to leave just file
+#  path up until current file, goes up one level then into src, and add path to list of 
+# modules searched
 sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "../src"))
 
 import environment
 from RAG_chain import ask
 
-# require two command line arguments: ablation condition name and ground truth module
+#if running
 if len(sys.argv) < 3:
     print("Usage: python eval/run_eval.py <condition> <ground_truth_module>")
     print("  e.g. python eval/run_eval.py recursive_foucault ground_truth_foucault")
@@ -61,16 +62,16 @@ results = []
 for qa in QA_PAIRS:
     # time the full ask() call to measure generation latency
     t0 = time.time()
-    response, hits = ask(qa["query"])
+    cited_response, llm_response, hits = ask(qa["query"])
     generation_latency = time.time() - t0
     retrieval_latency = 0  # retrieval happens inside ask; total is generation_latency
 
     # join retrieved chunks into a single string for the judge to evaluate
     context = "\n\n".join(doc.page_content for doc, _ in hits)
-    answer_text = strip_think(response.content)
+    answer_text = strip_think(llm_response.content)
 
     # extract token counts and throughput from Ollama's response metadata
-    meta = response.response_metadata
+    meta = llm_response.response_metadata
     input_tokens = meta.get("prompt_eval_count", 0)
     output_tokens = meta.get("eval_count", 0)
     eval_duration_s = meta.get("eval_duration", 1) / 1e9  # convert nanoseconds to seconds
