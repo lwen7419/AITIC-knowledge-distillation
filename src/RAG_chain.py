@@ -7,12 +7,13 @@ from citations import format_answer_with_citations
 # context, reranks chunks, builds system message with chunks as context, invokes model 
 # to generate answer, format answer with citations, returns cited resopnse and hits
 #returns (response, hits) so eval can extract token metadata and similarity scores
-def ask(query, k=5):
-    #sends query and k into ChromaDB's similarity search method and returns k closest matches 
-    # and their similarity scores as list of tuples
-    hits = environment.vector_store.similarity_search_with_score(query, k=k)
-    #rerank hits with PyTorch cross-encoder
+def ask(query, k=3):
+    #retrieves 2x candidates from ChromaDB so reranker has more to choose from
+    hits = environment.vector_store.similarity_search_with_score(query, k=k*2)
+    #rerank all candidates with PyTorch cross-encoder
     hits = environment.reranker.rerank(query, hits)
+    #only pass top k after reranking — reranker decides which k are most relevant
+    hits = hits[:k]
     #takes chunks into string with double newline between each chunk
     #unpacks each tuple in hits to only take chunks not scoree
     docs_content = "\n\n".join(doc.page_content for doc, _ in hits)
@@ -39,7 +40,7 @@ def ask(query, k=5):
 
 if __name__ == "__main__":
     #sample question
-    query = "What is the first image in this pdf?"
+    query = "What course is this text teaching?"
     #response shows up in stream
     #store llm response
     cited_response, _ = ask(query)
