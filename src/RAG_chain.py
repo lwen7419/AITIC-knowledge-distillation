@@ -3,11 +3,15 @@
 import environment
 from citations import format_answer_with_citations
 
-#method that searches vectorDB for relevant chunks and sends message with chunks as context
+#method that searches vectorDB for relevant chunks and sends message with chunks as \
+# context, reranks chunks, builds system message with chunks as context, invokes model 
+# to generate answer, format answer with citations, returns cited resopnse and hits
 #returns (response, hits) so eval can extract token metadata and similarity scores
 def ask(query, k=5):
-    #sends query and k into ChromaDB's similarity search method and returns k closest matches and their similarity scores as list of tuples
+    #sends query and k into ChromaDB's similarity search method and returns k closest matches 
+    # and their similarity scores as list of tuples
     hits = environment.vector_store.similarity_search_with_score(query, k=k)
+    #rerank hits with PyTorch cross-encoder
     hits = environment.reranker.rerank(query, hits)
     #takes chunks into string with double newline between each chunk
     #unpacks each tuple in hits to only take chunks not scoree
