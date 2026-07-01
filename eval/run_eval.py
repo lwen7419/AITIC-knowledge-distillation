@@ -8,12 +8,17 @@ sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "../
 import environment
 from RAG_chain import ask
 
-#if running
+#if passed two command line arguments and script itself such that length of command 
+# line is equal or larger than three
+#if smaller, pass error statement that exemplifies how to run the eval file
 if len(sys.argv) < 3:
     print("Usage: python eval/run_eval.py <condition> <ground_truth_module>")
     print("  e.g. python eval/run_eval.py recursive_foucault ground_truth_foucault")
     print("       python eval/run_eval.py recursive_biology ground_truth_biology")
     print("       python eval/run_eval.py recursive_cs111 ground_truth_cs111")
+    #stops Python program, 1 in argument signals to shell that error occurred
+    #whereas 0 in argument means stop program but everything went successful 
+    # just quit early
     sys.exit(1)
 
 # condition name is used to label the results JSON file e.g. "recursive_foucault"
