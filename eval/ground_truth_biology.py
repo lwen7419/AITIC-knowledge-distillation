@@ -1,3 +1,5 @@
+PDF_PATH = "data/TS-SCERT-Class-10-Biology-Textbook-in-English-Medium.pdf"
+
 QA_PAIRS = [
     {
         "query": "What did C.B. Van Niel use instead of water in his photosynthesis experiments?",

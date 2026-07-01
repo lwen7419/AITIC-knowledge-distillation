@@ -8,16 +8,17 @@ sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "../
 import environment
 from RAG_chain import ask
 
-#if passed two command line arguments and script itself such that length of command 
-# line is equal or larger than three
+#if passed three command line arguments and script itself such that length of command
+# line is equal or larger than four
 #if smaller, pass error statement that exemplifies how to run the eval file
-if len(sys.argv) < 3:
-    print("Usage: python eval/run_eval.py <condition> <ground_truth_module>")
-    print("  e.g. python eval/run_eval.py recursive_foucault ground_truth_foucault")
-    print("       python eval/run_eval.py recursive_biology ground_truth_biology")
-    print("       python eval/run_eval.py recursive_cs111 ground_truth_cs111")
+if len(sys.argv) < 4:
+    print("Usage: python eval/run_eval.py <condition> <ground_truth_module> <chunker>")
+    print("  chunker: 'recursive' or 'heading'")
+    print("  e.g. python eval/run_eval.py recursive_foucault ground_truth_foucault recursive")
+    print("       python eval/run_eval.py heading_foucault ground_truth_foucault heading")
+    print("       python eval/run_eval.py recursive_biology ground_truth_biology recursive")
     #stops Python program, 1 in argument signals to shell that error occurred
-    #whereas 0 in argument means stop program but everything went successful 
+    #whereas 0 in argument means stop program but everything went successful
     # just quit early
     sys.exit(1)
 
@@ -27,7 +28,13 @@ CONDITION = sys.argv[1]
 # dynamically load whichever ground truth module was passed as the second argument
 # and extract its QA_PAIRS list of {query, reference} dicts
 import importlib
-QA_PAIRS = importlib.import_module(sys.argv[2]).QA_PAIRS
+ground_truth_module = importlib.import_module(sys.argv[2])
+QA_PAIRS = ground_truth_module.QA_PAIRS
+
+# re-index the PDF using the chosen chunker before running queries
+CHUNKER = sys.argv[3]
+from Indexing import build_index
+build_index(ground_truth_module.PDF_PATH, CHUNKER)
 
 # prompt sent to the LLM judge to evaluate each answer
 # judge returns JSON with accurate, hallucinated, and reason fields

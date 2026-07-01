@@ -1,3 +1,5 @@
+PDF_PATH = "data/cs111_coursepack.pdf"
+
 QA_PAIRS = [
     {
         "query": "What university offers CS 111 and what is the course's full name?",
