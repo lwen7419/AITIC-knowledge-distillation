@@ -1,0 +1,395 @@
+{
+  "condition": "recursive_foucault",
+  "summary": {
+    "n_queries": 20,
+    "hit5_pct": 73.7,
+    "hallucination_pct": 10.5,
+    "avg_gen_latency_s": 43.751,
+    "avg_tokens_per_sec": 16.8,
+    "avg_input_tokens": 741,
+    "avg_output_tokens": 502,
+    "avg_similarity": 0.6242
+  },
+  "results": [
+    {
+      "query": "Who translated Chapter 1 of Power/Knowledge?",
+      "answer": "[No reference found] the provided text does not contain relevant information to answer: Who translated Chapter 1 of Power/Knowledge?",
+      "retrieval_latency_s": 0,
+      "generation_latency_s": 15.867,
+      "total_latency_s": 15.867,
+      "input_tokens": 527,
+      "output_tokens": 553,
+      "tokens_per_sec": 38.5,
+      "avg_similarity_score": 0.7392,
+      "sections_retrieved": [
+        null,
+        null,
+        null
+      ],
+      "accurate": false,
+      "hallucinated": true,
+      "reason": "The retrieved context does not mention John Mepham or any translator for Chapter 1 of Power/Knowledge."
+    },
+    {
+      "query": "Who translated Chapter 5 of Power/Knowledge?",
+      "answer": "According to the provided context, Chapter 5 of Power/Knowledge was translated by Kate Soper. The text explicitly states \"Chapter 5 by Kate Soper\" in the translations and sources section. This information is clearly documented in the translation credits section of the retrieved text.",
+      "retrieval_latency_s": 0,
+      "generation_latency_s": 7.994,
+      "total_latency_s": 7.994,
+      "input_tokens": 766,
+      "output_tokens": 242,
+      "tokens_per_sec": 39.5,
+      "avg_similarity_score": 0.8064,
+      "sections_retrieved": [
+        null,
+        null,
+        null
+      ],
+      "accurate": true,
+      "hallucinated": false,
+      "reason": "The retrieved context explicitly states \"Chapter 5 by Kate Soper\" in the translations and sources section."
+    },
+    {
+      "query": "What was the debate in Chapter 1 originally responding to?",
+      "answer": "The debate in Chapter 1 was originally responding to \"the project of June 1971, to set up a people's court to judge the police.\" This is explicitly stated in the text which mentions Foucault and Maoist militants discussing issues arising from this specific initiative. The context indicates this was the initial project that sparked their debate about popular justice and the role of courts.",
+      "retrieval_latency_s": 0,
+      "generation_latency_s": 40.683,
+      "total_latency_s": 40.683,
+      "input_tokens": 832,
+      "output_tokens": 319,
+      "tokens_per_sec": 9.5,
+      "avg_similarity_score": 0.739,
+      "sections_retrieved": [
+        null,
+        null,
+        null
+      ],
+      "accurate": true,
+      "hallucinated": false,
+      "reason": "The model answer correctly identifies the debate as originating from the June 1971 project to establish a people's court to judge the police, as explicitly stated in the retrieved context."
+    },
+    {
+      "query": "What three methods does Foucault identify as being used by the bourgeoisie to distance the proletarianised from the non-proletarianised people?",
+      "answer": "According to the retrieved context, Foucault identifies three methods used by the bourgeoisie to distance the proletarianised from the non-proletarianised people: the army, colonisation, and prisons. The context explicitly states \"These three methods are or were the army, colonisation and prisons\" as the means for creating separation between these groups. The text explains that the army drained off numbers from the peasant population, colonisation served as another means of draining elements, and prisons functioned as an anti-seditious system to create antagonism between the groups.",
+      "retrieval_latency_s": 0,
+      "generation_latency_s": 30.723,
+      "total_latency_s": 30.723,
+      "input_tokens": 774,
+      "output_tokens": 464,
+      "tokens_per_sec": 16.2,
+      "avg_similarity_score": 0.4383,
+      "sections_retrieved": [
+        null,
+        null,
+        null
+      ],
+      "accurate": true,
+      "hallucinated": false,
+      "reason": "The retrieved context explicitly states 'These three methods are or were the army, colonisation and prisons' as the methods identified by Foucault for distancing the proletarianised from the non-proletarianised people."
+    },
+    {
+      "query": "By what year was the failure of the prison project already recognised?",
+      "answer": "According to the retrieved context, the failure of the prison project was already recognized by 1820. The text states that \"In 1820 it was already understood that the prisons, far from transforming criminals into honest citizens, serve only to manufacture new criminals and to drive existing criminals even deeper into criminality.\" This indicates that the failure was realized virtually from the start, specifically by 1820.",
+      "retrieval_latency_s": 0,
+      "generation_latency_s": 6.701,
+      "total_latency_s": 6.701,
+      "input_tokens": 596,
+      "output_tokens": 261,
+      "tokens_per_sec": 49.1,
+      "avg_similarity_score": 0.6899,
+      "sections_retrieved": [
+        null,
+        null,
+        null
+      ],
+      "accurate": true,
+      "hallucinated": false,
+      "reason": "The retrieved context explicitly states that by 1820 it was understood prisons failed to transform criminals and instead made them worse."
+    },
+    {
+      "query": "How does Foucault describe the form in which power operates at the level of individuals?",
+      "answer": "Foucault describes power operating at the individual level through \"investment of power in the body\" via \"insistent, persistent, meticulous work\" on bodies through practices like gymnastics and exercises. He argues that power is not simply a State apparatus but functions through \"finer channels\" where each individual possesses a certain power that can also transmit wider power. Power exists as \"exercised\" rather than given or exchanged, operating as a \"relation of force\" rather than merely maintaining economic relations.",
+      "retrieval_latency_s": 0,
+      "generation_latency_s": 47.874,
+      "total_latency_s": 47.874,
+      "input_tokens": 766,
+      "output_tokens": 782,
+      "tokens_per_sec": 16.9,
+      "avg_similarity_score": 0.5749,
+      "sections_retrieved": [
+        null,
+        null,
+        null
+      ],
+      "accurate": null,
+      "hallucinated": null,
+      "reason": "parse error: "
+    },
+    {
+      "query": "What does Foucault say the eighteenth century invented with respect to power?",
+      "answer": "According to the provided context, Foucault states that the eighteenth century invented \"Panoptism\" as a technological invention in the order of power, comparable to the steam engine in production. This concept was first utilized on a local level in schools, barracks, and hospitals. Panoptism represents an ensemble of mechanisms that became central to the organization of power during this period.",
+      "retrieval_latency_s": 0,
+      "generation_latency_s": 36.525,
+      "total_latency_s": 36.525,
+      "input_tokens": 784,
+      "output_tokens": 357,
+      "tokens_per_sec": 15.4,
+      "avg_similarity_score": 0.5793,
+      "sections_retrieved": [
+        null,
+        null,
+        null
+      ],
+      "accurate": true,
+      "hallucinated": false,
+      "reason": "The model answer correctly states Panoptism as the invention described in the context, which explicitly calls it a technological invention in the order of power."
+    },
+    {
+      "query": "What was the slogan used by the Communist Party during the occupation to justify looting shops?",
+      "answer": "The slogan used by the Communist Party in the early years of the occupation to justify looting shops, particularly those on the Rue Buci, was \"Housewives, it is right to steal from the thieves.\" This slogan was presented as an example of how the Communist Party justified looting by contrasting \"thieves\" (bourgeois capitalists) with \"honest people.\" The context specifically identifies this as the slogan used during the occupation period.",
+      "retrieval_latency_s": 0,
+      "generation_latency_s": 28.304,
+      "total_latency_s": 28.304,
+      "input_tokens": 672,
+      "output_tokens": 318,
+      "tokens_per_sec": 12.7,
+      "avg_similarity_score": 0.6239,
+      "sections_retrieved": [
+        null,
+        null,
+        null
+      ],
+      "accurate": true,
+      "hallucinated": false,
+      "reason": "The retrieved context explicitly states the slogan as 'Housewives, it is right to steal from the thieves' used by the Communist Party during the early years of the occupation to justify looting shops on Rue Buci."
+    },
+    {
+      "query": "What does Foucault say about the relationship between the exercise of power and knowledge?",
+      "answer": "According to the retrieved context, Foucault argues that power and knowledge are deeply intertwined and mutually constitutive. He states that \"the exercise of power perpetually creates knowledge and, conversely, knowledge constantly induces effects of power.\" Foucault contends that knowledge and power are integrated with one another, emphasizing that \"it is impossible for power to be exercised without knowledge, it is impossible for knowledge not to engender power.\"",
+      "retrieval_latency_s": 0,
+      "generation_latency_s": 38.905,
+      "total_latency_s": 38.905,
+      "input_tokens": 696,
+      "output_tokens": 490,
+      "tokens_per_sec": 14.1,
+      "avg_similarity_score": 0.4445,
+      "sections_retrieved": [
+        null,
+        null,
+        null
+      ],
+      "accurate": true,
+      "hallucinated": false,
+      "reason": "The model answer correctly reflects the reference answer and retrieved context without adding false information."
+    },
+    {
+      "query": "What were the two forms of subjugated knowledge Foucault identifies in the Two Lectures?",
+      "answer": "According to the retrieved text, Foucault identifies two forms of subjugated knowledge in the Two Lectures: first, \"buried knowledges of erudition\" which are meticulous, scholarly historical contents that have been buried and disguised within functionalist coherence or formal systems, and second, \"disqualified local popular knowledges\" which are specific, non-academic knowledges that have been marginalized and allowed to fall into disuse. Both forms relate to historical knowledge of struggles that were confined to the margins of mainstream academic discourse.",
+      "retrieval_latency_s": 0,
+      "generation_latency_s": 62.311,
+      "total_latency_s": 62.311,
+      "input_tokens": 780,
+      "output_tokens": 734,
+      "tokens_per_sec": 12.7,
+      "avg_similarity_score": 0.5719,
+      "sections_retrieved": [
+        null,
+        null,
+        null
+      ],
+      "accurate": true,
+      "hallucinated": false,
+      "reason": "The model answer correctly identifies the two forms as 'buried knowledges of erudition' and 'disqualified local popular knowledges' based on the retrieved text's explicit descriptions of historical contents buried in functionalist systems and popular knowledge excluded from academic hierarchies."
+    },
+    {
+      "query": "What does Foucault say genealogy produces?",
+      "answer": "According to the context, Foucault states that genealogy produces \"a historical knowledge of struggles and to make use of this knowledge tactically today.\" It also produces historical knowledges \"capable of opposition and of struggle against the coercion of a theoretical, unitary, formal and scientific discourse.\" This project emancipates historical knowledges from scientific subjection and reactivates local knowledges in opposition to scientific hierarchization.",
+      "retrieval_latency_s": 0,
+      "generation_latency_s": 54.244,
+      "total_latency_s": 54.244,
+      "input_tokens": 792,
+      "output_tokens": 722,
+      "tokens_per_sec": 14.2,
+      "avg_similarity_score": 0.6767,
+      "sections_retrieved": [
+        null,
+        null,
+        null
+      ],
+      "accurate": true,
+      "hallucinated": false,
+      "reason": "The model answer correctly extracts key points from the context about genealogy producing historical knowledge of struggles, knowledges capable of opposition, and emancipation from scientific subjection."
+    },
+    {
+      "query": "Why does Foucault say spatial metaphors are equally geographical and strategic?",
+      "answer": "Foucault states that spatial metaphors are equally geographical and strategic because geography developed in close association with military concerns, as evidenced by etymological connections like \"region\" (from regere, \"to command\") and \"province\" (from vincere, \"to conquer\"). The text explicitly states that \"geography grew up in the shadow of the military,\" creating a natural circulation of concepts between geographical and strategic discourses. Specific examples such as \"field evokes the battlefield\" demonstrate how military terminology directly shapes geographical concepts.",
+      "retrieval_latency_s": 0,
+      "generation_latency_s": 49.802,
+      "total_latency_s": 49.802,
+      "input_tokens": 826,
+      "output_tokens": 610,
+      "tokens_per_sec": 13.2,
+      "avg_similarity_score": 0.3739,
+      "sections_retrieved": [
+        null,
+        null,
+        null
+      ],
+      "accurate": true,
+      "hallucinated": false,
+      "reason": "The model answer accurately captures the reference answer and retrieved context, which explicitly states that geography grew up in the shadow of the military and describes the circulation of notions between geographical and strategic discourses, with etymological examples like 'region' and 'province'."
+    },
+    {
+      "query": "What three chronological thresholds does the map as instrument of power/knowledge span?",
+      "answer": "The map as instrument of power/knowledge spans three chronological thresholds: the period of measure with the Greeks, the era of inquiry during the Middle Ages, and the time of examination in the eighteenth century. These correspond to the map's evolution from a measurement tool to an inquiry instrument and finally to an examination instrument, as evidenced by examples like electoral maps and taxation maps. The text explicitly states this progression as part of the map's historical development in relation to power and knowledge.",
+      "retrieval_latency_s": 0,
+      "generation_latency_s": 29.306,
+      "total_latency_s": 29.306,
+      "input_tokens": 782,
+      "output_tokens": 308,
+      "tokens_per_sec": 12.2,
+      "avg_similarity_score": 0.5315,
+      "sections_retrieved": [
+        null,
+        null,
+        null
+      ],
+      "accurate": true,
+      "hallucinated": false,
+      "reason": "The model answer correctly identifies the three thresholds as specified in the retrieved context and reference answer, aligning with the text's explicit statement about the map's evolution from measurement to inquiry to examination."
+    },
+    {
+      "query": "According to Foucault, what happened to the prison's original project of reform from the very beginning?",
+      "answer": "According to Foucault as presented in the context, the prison's original project of reform failed immediately from the start. The text states that \"the failure of the project was immediate, and was realised virtually from the start. In 1820 it was already understood that the prisons, far from transforming criminals into honest citizens, serve only to manufacture new criminals and to drive existing criminals even deeper into criminality.\" Foucault's hypothesis shows that prisons were never successfully fulfilling their intended purpose of transforming individuals, contrary to initial beliefs.",
+      "retrieval_latency_s": 0,
+      "generation_latency_s": 76.164,
+      "total_latency_s": 76.164,
+      "input_tokens": 731,
+      "output_tokens": 723,
+      "tokens_per_sec": 10.1,
+      "avg_similarity_score": 0.5353,
+      "sections_retrieved": [
+        null,
+        null,
+        null
+      ],
+      "accurate": true,
+      "hallucinated": false,
+      "reason": "The model answer correctly reflects the retrieved context stating the prison's reform project failed immediately from the start as explicitly described in the text."
+    },
+    {
+      "query": "How does Foucault describe what prison did to criminals instead of rehabilitating them?",
+      "answer": "According to Foucault, prisons \"serve only to manufacture new criminals and to drive existing criminals even deeper into criminality.\" He argues that the prison system was supposed to transform individuals but instead \"manufactured delinquents\" who were later found to be useful in both economic and political domains. The text states that prisons failed their original purpose of transforming criminals into honest citizens, as the system actually produced more criminals rather than rehabilitated them.",
+      "retrieval_latency_s": 0,
+      "generation_latency_s": 53.618,
+      "total_latency_s": 53.618,
+      "input_tokens": 722,
+      "output_tokens": 377,
+      "tokens_per_sec": 7.8,
+      "avg_similarity_score": 0.5265,
+      "sections_retrieved": [
+        null,
+        null,
+        null
+      ],
+      "accurate": true,
+      "hallucinated": false,
+      "reason": "The model answer correctly summarizes the retrieved context's claim that prisons 'serve only to manufacture new criminals' and fail at rehabilitation, aligning with Foucault's argument about prisons producing delinquents useful in economic and political spheres."
+    },
+    {
+      "query": "What does Foucault say the individual's identity and characteristics are a product of?",
+      "answer": "According to the context, Foucault states that personal identity is constituted through national discourse, specifically through institutions like Jules Ferry's universal primary schools that use history-geography to implant and inculcate civic and patriotic spirit. The text indicates that Foucault views individual identity as emerging from such educational systems rather than as a pre-existing entity. The fragment suggests that the individual is not defined as a self-contained unit but is shaped by these collective societal mechanisms.",
+      "retrieval_latency_s": 0,
+      "generation_latency_s": 106.036,
+      "total_latency_s": 106.036,
+      "input_tokens": 666,
+      "output_tokens": 792,
+      "tokens_per_sec": 7.8,
+      "avg_similarity_score": 0.7194,
+      "sections_retrieved": [
+        null,
+        null,
+        null
+      ],
+      "accurate": false,
+      "hallucinated": false,
+      "reason": "The model answer misrepresents Foucault's core argument by focusing exclusively on national discourse as the mechanism, while the reference answer explicitly states identity is the product of a general relation of power over bodies, multiplicities, movements, desires, and forces."
+    },
+    {
+      "query": "What did the French Revolution do first according to Foucault?",
+      "answer": "[No reference found] the provided text does not contain relevant information to answer: What did the French Revolution do first according to Foucault.",
+      "retrieval_latency_s": 0,
+      "generation_latency_s": 56.373,
+      "total_latency_s": 56.373,
+      "input_tokens": 741,
+      "output_tokens": 537,
+      "tokens_per_sec": 10.4,
+      "avg_similarity_score": 0.7534,
+      "sections_retrieved": [
+        null,
+        null,
+        null
+      ],
+      "accurate": false,
+      "hallucinated": true,
+      "reason": "The retrieved context discusses China's Cultural Revolution and Foucault's theories on popular justice but does not reference the French Revolution or its judicial apparatus removal."
+    },
+    {
+      "query": "What was Vidocq's role according to the footnote in Chapter 3?",
+      "answer": "[No reference found] the provided text does not contain relevant information to answer: What was Vidocq's role according to the footnote in Chapter 3.",
+      "retrieval_latency_s": 0,
+      "generation_latency_s": 49.824,
+      "total_latency_s": 49.824,
+      "input_tokens": 804,
+      "output_tokens": 426,
+      "tokens_per_sec": 9.6,
+      "avg_similarity_score": 0.7995,
+      "sections_retrieved": [
+        null,
+        null,
+        null
+      ],
+      "accurate": false,
+      "hallucinated": false,
+      "reason": "The retrieved context contains no information about Vidocq or the footnote in Chapter 3, so the reference answer is not supported by the provided text."
+    },
+    {
+      "query": "According to Foucault, what is the problem with posing the historical question as 'How is it that we have progressed?'",
+      "answer": "According to Foucault, posing the historical question as \"How is it that we have progressed?\" is problematic because it imposes a teleological progression where the present is assumed to be better than the past. He argues that this approach misrepresents historical understanding, as the question should focus on \"how do things happen?\" rather than assuming progress. The present is not necessarily more advanced or better understood than what happened previously, making the progresivist perspective fundamentally flawed.",
+      "retrieval_latency_s": 0,
+      "generation_latency_s": 40.861,
+      "total_latency_s": 40.861,
+      "input_tokens": 761,
+      "output_tokens": 506,
+      "tokens_per_sec": 13.7,
+      "avg_similarity_score": 0.6105,
+      "sections_retrieved": [
+        null,
+        null,
+        null
+      ],
+      "accurate": true,
+      "hallucinated": false,
+      "reason": "The model answer accurately captures Foucault's critique that the question assumes a teleological progression, making the present seem better than the past, which he explicitly states is a bad method in the retrieved context."
+    },
+    {
+      "query": "What chapter in Power/Knowledge deals with the History of Sexuality?",
+      "answer": "[No reference found] the provided text does not contain relevant information to answer: What chapter in Power/Knowledge deals with the History of Sexuality.",
+      "retrieval_latency_s": 0,
+      "generation_latency_s": 42.895,
+      "total_latency_s": 42.895,
+      "input_tokens": 802,
+      "output_tokens": 516,
+      "tokens_per_sec": 12.6,
+      "avg_similarity_score": 0.7509,
+      "sections_retrieved": [
+        null,
+        null,
+        null
+      ],
+      "accurate": false,
+      "hallucinated": false,
+      "reason": "The reference answer is incorrect as Foucault's 'Power and Knowledge' (typically titled 'The Archaeology of Knowledge' and 'Power and Knowledge') does not contain a chapter on the History of Sexuality; that work is distinct and titled 'The History of Sexuality'"
+    }
+  ]
+}

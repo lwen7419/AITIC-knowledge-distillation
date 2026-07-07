@@ -2,394 +2,394 @@
   "condition": "recursive_cs111",
   "summary": {
     "n_queries": 20,
-    "hit5_pct": 90.0,
-    "hallucination_pct": 10.0,
-    "avg_gen_latency_s": 17.311,
-    "avg_tokens_per_sec": 39.9,
-    "avg_input_tokens": 319,
-    "avg_output_tokens": 618,
-    "avg_similarity": 0.6
+    "hit5_pct": 80.0,
+    "hallucination_pct": 15.0,
+    "avg_gen_latency_s": 24.747,
+    "avg_tokens_per_sec": 39.0,
+    "avg_input_tokens": 682,
+    "avg_output_tokens": 886,
+    "avg_similarity": 0.6676
   },
   "results": [
     {
       "query": "What university offers CS 111 and what is the course's full name?",
-      "answer": "Boston University offers CS 111 as indicated in the context. The full name of the course is CAS CS 111, which is explicitly stated in the retrieved information. The context also references the CS 111 Coursepack as required for this course.",
+      "answer": "Boston University offers CS 111, and the course's full name is Computer Science 111. This information is clearly stated in the document as \"Computer Science 111\" under the course overview section. The document also identifies Boston University as the institution providing this course.",
       "retrieval_latency_s": 0,
-      "generation_latency_s": 13.709,
-      "total_latency_s": 13.709,
-      "input_tokens": 245,
-      "output_tokens": 589,
-      "tokens_per_sec": 49.1,
-      "avg_similarity_score": 0.5902,
+      "generation_latency_s": 14.834,
+      "total_latency_s": 14.834,
+      "input_tokens": 616,
+      "output_tokens": 390,
+      "tokens_per_sec": 47.9,
+      "avg_similarity_score": 0.7006,
       "sections_retrieved": [
-        "Introduction",
-        "Introduction",
-        "Introduction"
+        null,
+        null,
+        null
       ],
       "accurate": false,
       "hallucinated": true,
-      "reason": "The model answer incorrectly reports the full name as 'CAS CS 111' instead of 'Introduction to Computer Science I' as specified in the reference answer."
+      "reason": "The model answer incorrectly states the full name as 'Computer Science 111' when the retrieved context and reference answer both indicate the formal title is 'Introduction to Computer Science I'."
     },
     {
       "query": "How many major units does CS 111 cover and what are they?",
-      "answer": "[No reference found] the provided text does not contain relevant information to answer: How many major units does CS 111 cover and what are they?",
+      "answer": "Based on the retrieved context, CS 111 covers 6 major units: Course Overview, Python Basics, Strings and Lists, Intro. to Functions, Making Decisions: Conditional Execution, and Variable Scope; Functions Calling Functions. These units are explicitly listed in the document's table of contents with corresponding page ranges. The context specifies Unit 1 as \"Functional Programming in Python,\" but only these six distinct topics are identified as major sections of the course.",
       "retrieval_latency_s": 0,
-      "generation_latency_s": 6.985,
-      "total_latency_s": 6.985,
-      "input_tokens": 251,
-      "output_tokens": 305,
-      "tokens_per_sec": 48.8,
-      "avg_similarity_score": 0.7354,
+      "generation_latency_s": 145.577,
+      "total_latency_s": 145.577,
+      "input_tokens": 516,
+      "output_tokens": 5901,
+      "tokens_per_sec": 41.2,
+      "avg_similarity_score": 0.7478,
       "sections_retrieved": [
-        "Introduction",
-        "Introduction",
-        "Introduction"
-      ],
-      "accurate": true,
-      "hallucinated": false,
-      "reason": "The retrieved context lacks specific details about the major units, confirming the model correctly states no relevant information is present."
-    },
-    {
-      "query": "What teaching approach are lectures in CS 111 based on, and who developed it?",
-      "answer": "The lectures in CS 111 are based on a teaching approach called peer instruction, which was developed by Eric Mazur at Harvard. This approach follows a process where questions are posed (possibly after a short introduction). The context specifically states this method was created by Eric Mazur at Harvard.",
-      "retrieval_latency_s": 0,
-      "generation_latency_s": 8.751,
-      "total_latency_s": 8.751,
-      "input_tokens": 1037,
-      "output_tokens": 242,
-      "tokens_per_sec": 40.1,
-      "avg_similarity_score": 0.6364,
-      "sections_retrieved": [
-        "Introduction",
         null,
-        "Introduction"
-      ],
-      "accurate": true,
-      "hallucinated": false,
-      "reason": "The retrieved context explicitly states the lectures are based on peer instruction developed by Eric Mazur at Harvard."
-    },
-    {
-      "query": "How many hours of work per week should students allow for CS 111?",
-      "answer": "[No reference found] the provided text does not contain relevant information to answer: How many hours of work per week should students allow for CS 111.",
-      "retrieval_latency_s": 0,
-      "generation_latency_s": 18.041,
-      "total_latency_s": 18.041,
-      "input_tokens": 258,
-      "output_tokens": 330,
-      "tokens_per_sec": 19.7,
-      "avg_similarity_score": 0.7386,
-      "sections_retrieved": [
-        "Introduction",
-        "Introduction",
-        "Introduction"
-      ],
-      "accurate": true,
-      "hallucinated": false,
-      "reason": "The retrieved context does not specify the weekly work hours for CS 111, so the model correctly states no information is provided."
-    },
-    {
-      "query": "What are the two deadline rules for CS 111 assignments?",
-      "answer": "The context states that \"No submissions accepted after 24 hours\" is one deadline rule. It also mentions \"part I due by 11:59 p.\" as a specific assignment deadline. These represent the two deadline rules provided for CS 111 assignments in the retrieved text.",
-      "retrieval_latency_s": 0,
-      "generation_latency_s": 53.054,
-      "total_latency_s": 53.054,
-      "input_tokens": 310,
-      "output_tokens": 1446,
-      "tokens_per_sec": 28.0,
-      "avg_similarity_score": 0.659,
-      "sections_retrieved": [
-        "Introduction",
-        "Introduction",
-        "Introduction"
+        null,
+        null
       ],
       "accurate": false,
       "hallucinated": true,
-      "reason": "The model answer incorrectly claims the specific part I deadline as a rule, but the reference answer includes the penalty rule which is absent in the context."
+      "reason": "The model answer falsely states six major units including 'Course Overview' and the topics of Unit 1, while the reference specifies five units and the context only shows Unit 1 without supporting six separate units."
+    },
+    {
+      "query": "What teaching approach are lectures in CS 111 based on, and who developed it?",
+      "answer": "The lectures in CS 111 are based on a teaching approach called peer instruction, which was developed by Eric Mazur at Harvard. This approach uses a structured process where students first respond individually, then discuss in small groups, and finally vote collectively on the same platform. The method promotes active engagement and immediate feedback for both students and instructors.",
+      "retrieval_latency_s": 0,
+      "generation_latency_s": 14.782,
+      "total_latency_s": 14.782,
+      "input_tokens": 723,
+      "output_tokens": 304,
+      "tokens_per_sec": 25.5,
+      "avg_similarity_score": 0.6545,
+      "sections_retrieved": [
+        null,
+        null,
+        null
+      ],
+      "accurate": true,
+      "hallucinated": false,
+      "reason": "The model answer accurately reflects the peer instruction approach, its developer Eric Mazur, and the described process and benefits from the retrieved context."
+    },
+    {
+      "query": "How many hours of work per week should students allow for CS 111?",
+      "answer": "According to the course description, students should allow for 10-15 hours of work per week for CS 111. This information is stated directly in the \"A Rigorous Introduction\" section of the course materials. The course is designed to be rigorous and requires consistent effort throughout the semester.",
+      "retrieval_latency_s": 0,
+      "generation_latency_s": 12.15,
+      "total_latency_s": 12.15,
+      "input_tokens": 821,
+      "output_tokens": 318,
+      "tokens_per_sec": 31.9,
+      "avg_similarity_score": 0.7532,
+      "sections_retrieved": [
+        null,
+        null,
+        null
+      ],
+      "accurate": true,
+      "hallucinated": false,
+      "reason": "The model answer correctly identifies the 10-15 hour recommendation from the course materials without adding unverified details."
+    },
+    {
+      "query": "What are the two deadline rules for CS 111 assignments?",
+      "answer": "The two deadline rules for CS 111 assignments are: weekly problem sets have part I due by 11:59 p.m. on Thursday and part II due by 11:59 p.m. on Sunday. The final project can be submitted up to 24 hours late with a 10% penalty, but no submissions are accepted after 24 hours.",
+      "retrieval_latency_s": 0,
+      "generation_latency_s": 13.245,
+      "total_latency_s": 13.245,
+      "input_tokens": 754,
+      "output_tokens": 400,
+      "tokens_per_sec": 35.4,
+      "avg_similarity_score": 0.6864,
+      "sections_retrieved": [
+        null,
+        null,
+        null
+      ],
+      "accurate": true,
+      "hallucinated": false,
+      "reason": "The model answer accurately captures both deadline rules from the retrieved context: the two-part due dates for weekly problem sets and the late submission policy for the final project."
     },
     {
       "query": "What is required to earn full participation credit in CS 111?",
-      "answer": "Full participation credit requires earning 85% of points for pre-lecture and in-lecture questions, making 85% of lecture-attendance votes, and attending 85% of the labs. The context specifies these three components as the criteria for full credit in the 10% participation portion. If any component falls below 85%, the credit is reduced proportionally.",
+      "answer": "To earn full participation credit in CS 111, you must earn 85% of points for pre-lecture and in-lecture questions, make 85% of the lecture-attendance votes, and attend 85% of the labs. The context clearly states these requirements under the Participation section. This policy is designed to allow for occasional absences while maintaining a consistent standard for participation credit.",
       "retrieval_latency_s": 0,
-      "generation_latency_s": 10.416,
-      "total_latency_s": 10.416,
-      "input_tokens": 327,
-      "output_tokens": 365,
-      "tokens_per_sec": 39.1,
-      "avg_similarity_score": 0.6753,
+      "generation_latency_s": 14.535,
+      "total_latency_s": 14.535,
+      "input_tokens": 672,
+      "output_tokens": 478,
+      "tokens_per_sec": 37.2,
+      "avg_similarity_score": 0.7181,
       "sections_retrieved": [
-        "Introduction",
-        "Introduction",
-        "Introduction"
+        null,
+        null,
+        null
       ],
       "accurate": true,
       "hallucinated": false,
-      "reason": "The model answer correctly summarizes the three required components (85% for pre-lecture/in-lecture questions, lecture-attendance votes, and lab attendance) and the proportional reduction rule from the retrieved context without adding or omitting any details."
+      "reason": "The model answer correctly restates the specific 85% thresholds for pre-lecture/in-lecture questions, lecture-attendance votes, and lab attendance from the context's Participation section without adding unverified details."
     },
     {
       "query": "Who is the instructor for CS 111 A1/A2 lectures?",
-      "answer": "The instructor for CS 111 A1/A2 lectures is David Sullivan according to the provided context. This information is explicitly listed in the course staff section of the retrieved text. The context confirms David Sullivan's role as the instructor specifically for these lecture sections.",
+      "answer": "The instructor for CS 111 A1/A2 lectures is David Sullivan, as stated in the Course Staff section of the retrieved context. The document specifically lists him as the instructor for these lecture sections. This information is provided in the course materials for the Boston University CS 111 course in Spring 2026.",
       "retrieval_latency_s": 0,
-      "generation_latency_s": 7.236,
-      "total_latency_s": 7.236,
-      "input_tokens": 264,
-      "output_tokens": 279,
-      "tokens_per_sec": 42.9,
-      "avg_similarity_score": 0.6155,
+      "generation_latency_s": 7.976,
+      "total_latency_s": 7.976,
+      "input_tokens": 799,
+      "output_tokens": 255,
+      "tokens_per_sec": 41.4,
+      "avg_similarity_score": 0.6532,
       "sections_retrieved": [
-        "Introduction",
-        "Introduction",
-        "Introduction"
+        null,
+        null,
+        null
       ],
       "accurate": true,
       "hallucinated": false,
-      "reason": "The retrieved context explicitly states that David Sullivan is the instructor for A1/A2 lectures under the 'Course Staff' section."
+      "reason": "The retrieved context explicitly states David Sullivan as the instructor for A1/A2 lectures in the Course Staff section."
     },
     {
       "query": "What does the % operator do in Python?",
       "answer": "[No reference found] the provided text does not contain relevant information to answer: What does the % operator do in Python?",
       "retrieval_latency_s": 0,
-      "generation_latency_s": 6.378,
-      "total_latency_s": 6.378,
-      "input_tokens": 235,
-      "output_tokens": 245,
-      "tokens_per_sec": 43.4,
-      "avg_similarity_score": 0.623,
+      "generation_latency_s": 9.254,
+      "total_latency_s": 9.254,
+      "input_tokens": 711,
+      "output_tokens": 331,
+      "tokens_per_sec": 43.3,
+      "avg_similarity_score": 0.7122,
       "sections_retrieved": [
-        "Introduction",
-        "Introduction",
-        "Introduction"
+        null,
+        null,
+        null
       ],
-      "accurate": true,
-      "hallucinated": false,
-      "reason": "The retrieved context does not mention the modulus operator, making the statement accurate."
+      "accurate": false,
+      "hallucinated": true,
+      "reason": "The retrieved context does not mention the % operator, making the reference answer unsupported and hallucinated."
     },
     {
       "query": "What does the / operator always produce in Python, regardless of the operands?",
-      "answer": "The / operator always produces a float result in Python, regardless of the operands. This means that even when dividing integers, the result will be a floating-point number. Examples include 5/3 yielding 1.6666666666666667 instead of an integer.",
+      "answer": "The / operator always produces a float result in Python, regardless of the operands. This is explicitly stated in the retrieved context as a fundamental characteristic of division in Python. For example, 5 / 3 produces 1.6666666666666667, which is a float.",
       "retrieval_latency_s": 0,
-      "generation_latency_s": 8.3,
-      "total_latency_s": 8.3,
-      "input_tokens": 241,
-      "output_tokens": 339,
-      "tokens_per_sec": 45.3,
-      "avg_similarity_score": 0.5973,
+      "generation_latency_s": 8.598,
+      "total_latency_s": 8.598,
+      "input_tokens": 536,
+      "output_tokens": 286,
+      "tokens_per_sec": 39.5,
+      "avg_similarity_score": 0.7012,
       "sections_retrieved": [
-        "Introduction",
-        "Introduction",
-        "Introduction"
+        null,
+        null,
+        null
       ],
       "accurate": true,
       "hallucinated": false,
-      "reason": "The model answer correctly states that the / operator always returns a float in Python, matching the reference answer and context."
+      "reason": "The retrieved context explicitly states that the / operator always produces a float result, with examples confirming this behavior in Python."
     },
     {
       "query": "What does the // operator do in Python and does it round?",
-      "answer": "The context states that there is a separate // operator for integer division. It does not explicitly explain how rounding works with this operator. The context only mentions that the / operator produces float results.",
+      "answer": "The // operator in Python performs integer division, which discards any fractional part of the result. It does not round; instead, it truncates toward zero. For example, 5 // 3 equals 1, not 2.",
       "retrieval_latency_s": 0,
-      "generation_latency_s": 71.927,
-      "total_latency_s": 71.927,
-      "input_tokens": 318,
-      "output_tokens": 2887,
-      "tokens_per_sec": 40.9,
-      "avg_similarity_score": 0.6366,
+      "generation_latency_s": 9.366,
+      "total_latency_s": 9.366,
+      "input_tokens": 632,
+      "output_tokens": 291,
+      "tokens_per_sec": 37.7,
+      "avg_similarity_score": 0.71,
       "sections_retrieved": [
-        "Introduction",
-        "Introduction",
-        "Introduction"
+        null,
+        null,
+        null
       ],
       "accurate": true,
       "hallucinated": false,
-      "reason": "The context confirms the // operator is for integer division, which inherently discards fractional parts and does not round."
+      "reason": "The reference answer correctly states that // performs integer division by discarding fractional parts without rounding, as explicitly confirmed by the retrieved context's note 'Note that it does not round!'"
     },
     {
       "query": "What are the two types of homework problems in CS 111?",
-      "answer": "The two types of homework problems in CS 111 are individual-only and pair-optional. Individual-only problems must be completed on your own, while pair-optional problems can be completed alone or with one other student. The document specifies that for both types, students may discuss main ideas but cannot view or share work with others.",
+      "answer": "The two types of homework problems in CS 111 are individual-only and pair-optional. Individual-only problems must be completed on your own, while pair-optional problems can be completed alone or with one other student. The context specifies that for both types, students may discuss main ideas but cannot view or show work to others.",
       "retrieval_latency_s": 0,
-      "generation_latency_s": 6.526,
-      "total_latency_s": 6.526,
-      "input_tokens": 413,
-      "output_tokens": 202,
-      "tokens_per_sec": 37.5,
-      "avg_similarity_score": 0.6438,
+      "generation_latency_s": 10.717,
+      "total_latency_s": 10.717,
+      "input_tokens": 644,
+      "output_tokens": 354,
+      "tokens_per_sec": 39.2,
+      "avg_similarity_score": 0.6208,
       "sections_retrieved": [
-        "Introduction",
-        "Introduction",
-        "Introduction"
+        null,
+        null,
+        null
       ],
       "accurate": true,
       "hallucinated": false,
-      "reason": "The reference answer correctly describes the two types of homework problems as explicitly stated in the retrieved context."
+      "reason": "The model answer correctly identifies the two types of homework problems as individual-only and pair-optional based on the retrieved context."
     },
     {
       "query": "What is a local variable in Python according to CS 111?",
-      "answer": "According to the provided context, a local variable in Python is created when you assign a value to a variable inside a function. These variables are stored in memory blocks called frames, with each function call getting its own frame for local variables. Local variables have priority over global variables with the same name when used within the function.",
+      "answer": "A local variable in Python is created when you assign a value to a variable inside a function. It \"belongs\" to that function and cannot be accessed outside of it. The parameters of a function are also considered local variables.",
       "retrieval_latency_s": 0,
-      "generation_latency_s": 10.076,
-      "total_latency_s": 10.076,
-      "input_tokens": 246,
-      "output_tokens": 359,
-      "tokens_per_sec": 38.6,
-      "avg_similarity_score": 0.5164,
+      "generation_latency_s": 11.017,
+      "total_latency_s": 11.017,
+      "input_tokens": 716,
+      "output_tokens": 373,
+      "tokens_per_sec": 40.0,
+      "avg_similarity_score": 0.6474,
       "sections_retrieved": [
-        "# we can't access b here",
-        "Introduction",
-        "# we access the global b here"
+        null,
+        null,
+        null
       ],
       "accurate": true,
       "hallucinated": false,
-      "reason": "The model answer correctly summarizes the provided context about local variables' creation, storage in frames, and priority over global variables without introducing inaccuracies or false claims."
+      "reason": "The model answer correctly describes local variables as created by assignment inside a function, belonging to the function, and inaccessible outside, including function parameters being local."
     },
     {
       "query": "What is a global variable and can it be used inside a function?",
-      "answer": "A global variable is created when we assign a value to a variable outside of a function and belongs to the global scope. According to the context, \"A global variable can be used anywhere in your program,\" which includes inside functions. However, the context notes that \"It's not a good idea to access a global variable inside a function\" despite its accessibility.",
+      "answer": "A global variable is a variable declared outside of any function that belongs to the global scope. Yes, a global variable can be used inside a function, as explicitly stated in the context: \"A global variable can be used anywhere in your program.\" However, the context specifically notes that using global variables inside functions is \"not recommended!\"",
       "retrieval_latency_s": 0,
-      "generation_latency_s": 12.569,
-      "total_latency_s": 12.569,
-      "input_tokens": 271,
-      "output_tokens": 489,
-      "tokens_per_sec": 41.7,
-      "avg_similarity_score": 0.4233,
+      "generation_latency_s": 13.363,
+      "total_latency_s": 13.363,
+      "input_tokens": 860,
+      "output_tokens": 441,
+      "tokens_per_sec": 39.0,
+      "avg_similarity_score": 0.5515,
       "sections_retrieved": [
-        "# we can access c here",
-        "# we can't access b here",
-        "Introduction"
+        null,
+        null,
+        null
       ],
       "accurate": true,
       "hallucinated": false,
-      "reason": "The model answer correctly states that global variables created outside functions can be used inside functions but are not recommended, matching the context and reference answer."
+      "reason": "The model answer correctly states that a global variable can be used inside a function but is not recommended, matching the retrieved context and reference answer."
     },
     {
       "query": "Where are variables stored in memory according to CS 111?",
-      "answer": "According to the retrieved context, variables are stored in blocks of memory known as frames. Each function call gets a frame for its local variables, which goes away when the function returns. Global variables are stored in the global frame, and all frames are stored in the stack region of memory.",
+      "answer": "According to CS 111, variables are stored in frames. Local variables are stored in frames on the stack memory, while global variables are stored in the global frame. This is explained in the context about frames and the stack.",
       "retrieval_latency_s": 0,
-      "generation_latency_s": 11.293,
-      "total_latency_s": 11.293,
-      "input_tokens": 240,
-      "output_tokens": 424,
-      "tokens_per_sec": 40.4,
-      "avg_similarity_score": 0.6235,
+      "generation_latency_s": 106.4,
+      "total_latency_s": 106.4,
+      "input_tokens": 459,
+      "output_tokens": 3839,
+      "tokens_per_sec": 36.7,
+      "avg_similarity_score": 0.6863,
       "sections_retrieved": [
-        "Introduction",
-        "Introduction",
-        "Introduction"
+        null,
+        null,
+        null
       ],
-      "accurate": true,
+      "accurate": false,
       "hallucinated": false,
-      "reason": "The model answer accurately reflects the retrieved context, including global variable storage and stack-based frame organization."
+      "reason": "The reference answer states that all variable frames are stored in the stack, but the context specifies that global variables are stored in the global frame, not the stack."
     },
     {
       "query": "What version of Python does CS 111 use?",
-      "answer": "CS 111 at Boston University uses Python 3, as explicitly stated in the \"Getting Started With Python\" material. The context specifically mentions \"We're using Python 3 (not 2).\" This is confirmed in the pre-lecture materials for the course.",
+      "answer": "[No reference found] the provided text does not contain relevant information to answer: What version of Python does CS 111 use?",
       "retrieval_latency_s": 0,
-      "generation_latency_s": 7.526,
-      "total_latency_s": 7.526,
-      "input_tokens": 244,
-      "output_tokens": 284,
-      "tokens_per_sec": 41.6,
-      "avg_similarity_score": 0.4994,
+      "generation_latency_s": 10.816,
+      "total_latency_s": 10.816,
+      "input_tokens": 512,
+      "output_tokens": 393,
+      "tokens_per_sec": 41.2,
+      "avg_similarity_score": 0.6502,
       "sections_retrieved": [
-        "Introduction",
-        "Introduction",
-        "Introduction"
+        null,
+        null,
+        null
       ],
       "accurate": true,
       "hallucinated": false,
-      "reason": "The retrieved context explicitly states 'We're using Python 3 (not 2)' in the Pre-Lecture 'Getting Started With Python' section for CS 111."
+      "reason": "The retrieved context does not contain explicit mention of Python version."
     },
     {
       "query": "What is a string in Python?",
-      "answer": "A string is a sequence of characters/symbols. It is surrounded by single or double quotes, as shown in examples like \"hello\" and 'Picobot'. Additionally, a string can be defined recursively as a character followed by a string.",
+      "answer": "A string in Python is a sequence of characters or symbols. It is surrounded by single or double quotes. Examples include \"hello\" and 'Picobot'.",
       "retrieval_latency_s": 0,
-      "generation_latency_s": 48.639,
-      "total_latency_s": 48.639,
-      "input_tokens": 258,
-      "output_tokens": 1903,
-      "tokens_per_sec": 39.9,
-      "avg_similarity_score": 0.533,
+      "generation_latency_s": 6.988,
+      "total_latency_s": 6.988,
+      "input_tokens": 577,
+      "output_tokens": 236,
+      "tokens_per_sec": 41.7,
+      "avg_similarity_score": 0.6142,
       "sections_retrieved": [
-        "Introduction",
-        "Introduction",
-        "Introduction"
+        null,
+        null,
+        null
       ],
       "accurate": true,
       "hallucinated": false,
-      "reason": "The model answer correctly combines the reference definition of a string as a sequence of characters in quotes with the recursive definition from the context, accurately reflecting both."
+      "reason": "The model answer correctly describes a string in Python as a sequence of characters or symbols surrounded by quotes, matching the reference and context examples without adding incorrect information."
     },
     {
       "query": "What is the syntax for a list comprehension with a filter condition in Python?",
       "answer": "[No reference found] the provided text does not contain relevant information to answer: What is the syntax for a list comprehension with a filter condition in Python?",
       "retrieval_latency_s": 0,
-      "generation_latency_s": 8.119,
-      "total_latency_s": 8.119,
-      "input_tokens": 219,
-      "output_tokens": 305,
-      "tokens_per_sec": 40.8,
-      "avg_similarity_score": 0.4899,
+      "generation_latency_s": 48.681,
+      "total_latency_s": 48.681,
+      "input_tokens": 741,
+      "output_tokens": 1879,
+      "tokens_per_sec": 40.2,
+      "avg_similarity_score": 0.6818,
       "sections_retrieved": [
-        "Introduction",
-        "Introduction",
-        "Introduction"
+        null,
+        null,
+        null
       ],
       "accurate": true,
       "hallucinated": false,
-      "reason": "The retrieved context shows a list comprehension example without a filter condition and does not describe the syntax for filter conditions."
+      "reason": "The retrieved context does not explicitly state the syntax pattern for a list comprehension with a filter condition, though it shows examples of list comprehensions."
     },
     {
       "query": "What is a common mistake when using 'and' or 'or' in Python conditionals?",
-      "answer": "A common mistake when using 'and' or 'or' in Python conditionals is using non-boolean expressions on one side of the operator. The provided context shows the problematic example where \"a == 0 or 1\" is invalid because the right side (1) is not a boolean expression. The context specifically states that both sides of the operator should be boolean expressions that could stand on their own.",
+      "answer": "A common mistake when using 'and' or 'or' in Python conditionals is using non-boolean expressions on one side of the operator, such as comparing a variable to a number without a boolean context. For example, writing \"a == 0 or 1\" instead of \"a == 0 or a == 1\" makes Python treat 1 as a truthy value rather than a boolean expression. Python doesn't issue warnings for this issue, but it often leads to unexpected behavior since the right-hand side must evaluate as a boolean.",
       "retrieval_latency_s": 0,
-      "generation_latency_s": 11.883,
-      "total_latency_s": 11.883,
-      "input_tokens": 356,
+      "generation_latency_s": 12.67,
+      "total_latency_s": 12.67,
+      "input_tokens": 905,
       "output_tokens": 429,
-      "tokens_per_sec": 39.7,
-      "avg_similarity_score": 0.658,
+      "tokens_per_sec": 40.4,
+      "avg_similarity_score": 0.6712,
       "sections_retrieved": [
-        "Introduction",
-        "Introduction",
-        "Introduction"
+        null,
+        null,
+        null
       ],
       "accurate": true,
       "hallucinated": false,
-      "reason": "The model answer correctly identifies the mistake of using non-boolean expressions like integers on one side of 'and' or 'or'."
+      "reason": "The model answer correctly identifies the mistake of using non-boolean expressions (like integers) on one side of 'and' or 'or', which Python treats as truthy values but requires boolean expressions for proper operation."
     },
     {
       "query": "What does range(low, high) produce in Python?",
-      "answer": "The range(low, high) function produces a sequence of integers starting from low up to but not including high, meaning it generates values from low to high-1. According to the context, this creates a range where the output is \"from low to high-1.\" For example, list(range(3, 10)) produces [3, 4, 5, 6, 7, 8, 9], which confirms it generates integers in that specific range.",
+      "answer": "range(low, high) produces a sequence of integers starting at low and ending at high-1 (not including high). For example, range(3, 10) generates [3, 4, 5, 6, 7, 8, 9] as shown in the provided context. This function creates an iterable that includes all integers between low and high-1.",
       "retrieval_latency_s": 0,
-      "generation_latency_s": 13.307,
-      "total_latency_s": 13.307,
-      "input_tokens": 415,
-      "output_tokens": 492,
+      "generation_latency_s": 15.56,
+      "total_latency_s": 15.56,
+      "input_tokens": 706,
+      "output_tokens": 558,
       "tokens_per_sec": 40.3,
-      "avg_similarity_score": 0.5824,
+      "avg_similarity_score": 0.5913,
       "sections_retrieved": [
-        "Introduction",
-        "Introduction",
-        "Introduction"
+        null,
+        null,
+        null
       ],
       "accurate": true,
       "hallucinated": false,
-      "reason": "The model answer correctly states that range(low, high) produces integers from low to high-1, matching the reference answer and retrieved context examples."
+      "reason": "The model answer correctly describes range(low, high) as producing integers from low to high-1 (excluding high), matching the context examples like range(3, 10) generating [3, 4, ..., 9] and aligning with Python's standard behavior."
     },
     {
       "query": "What are the two steps taken when an assignment statement executes in Python?",
-      "answer": "[No reference found] the provided text does not contain relevant information to answer: What are the two steps taken when an assignment statement executes in Python?",
+      "answer": "The two steps taken when an assignment statement executes in Python are: 1) evaluate the expression on the right-hand side of the =, and 2) assign the resulting value to the variable on the left-hand side of the =. This process follows the general syntax \"variable = expression\" as described in the context. The context clearly outlines these two sequential steps that occur when executing an assignment statement.",
       "retrieval_latency_s": 0,
-      "generation_latency_s": 11.49,
-      "total_latency_s": 11.49,
-      "input_tokens": 226,
-      "output_tokens": 438,
-      "tokens_per_sec": 40.6,
-      "avg_similarity_score": 0.5226,
+      "generation_latency_s": 8.405,
+      "total_latency_s": 8.405,
+      "input_tokens": 747,
+      "output_tokens": 271,
+      "tokens_per_sec": 40.5,
+      "avg_similarity_score": 0.6003,
       "sections_retrieved": [
-        "Introduction",
-        "Introduction",
-        "Introduction"
+        null,
+        null,
+        null
       ],
       "accurate": true,
       "hallucinated": false,
-      "reason": "The reference answer accurately describes the two fundamental steps of assignment statement execution in Python."
+      "reason": "The model answer correctly states the two steps as per the retrieved context's explicit description of assignment statement execution."
     }
   ]
 }
