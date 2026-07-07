@@ -6,7 +6,7 @@ from langchain_core.documents import Document
 
 def build_index(pdf_path, chunker="recursive"):
     #clear existing collection so recursive and semantic chunks don't mix
-    environment.vector_store.delete_collection()
+    environment.vector_store.reset_collection()
 
     #pdf reader, makes list of docs
     loader = PyPDFLoader(pdf_path)
@@ -53,6 +53,6 @@ def build_index(pdf_path, chunker="recursive"):
 
 if __name__ == "__main__":
     build_index(
-        "/Users/lidasmac/Desktop/Foucault_Michel_Power_Knowledge_Selected_Interviews_and_Other_Writings_1972-1977.pdf",
+        "data/Foucault_Michel_Power_Knowledge_Selected_Interviews_and_Other_Writings_1972-1977.pdf",
         chunker="recursive",
     )

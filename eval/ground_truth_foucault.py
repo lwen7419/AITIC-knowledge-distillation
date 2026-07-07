@@ -1,4 +1,4 @@
-PDF_PATH = "/Users/lidasmac/Desktop/Foucault_Michel_Power_Knowledge_Selected_Interviews_and_Other_Writings_1972-1977.pdf"
+PDF_PATH = "data/Foucault_Michel_Power_Knowledge_Selected_Interviews_and_Other_Writings_1972-1977.pdf"
 
 QA_PAIRS = [
     {
